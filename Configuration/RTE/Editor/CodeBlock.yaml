@@ -1,0 +1,17 @@
+editor:
+  config:
+    importModules:
+      - { module: '@ckeditor/ckeditor5-code-block', exports: [ 'CodeBlock' ] }
+    codeBlock:
+      languages: [
+        { language: 'plaintext', label: 'Text', class: 'cbplaintext' },
+        { language: 'bash', label: 'Bash', class: 'cbbash' },
+        { language: 'html', label: 'HTML', class: 'cbhtml' },
+        { language: 'css', label: 'CSS', class: 'cbcss' },
+        { language: 'php', label: 'PHP', class: 'cbphp' },
+        { language: 'typoscript', label: 'TypoScript', class: 'cbtyposcript' }
+      ]
+    style:
+      definitions:
+        #- { name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelcodeblock', element: 'code', classes: ['codeblock'],  }
+        - { name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.codeblock.kbd', element: 'kbd', classes: ['cp-kbd'] }

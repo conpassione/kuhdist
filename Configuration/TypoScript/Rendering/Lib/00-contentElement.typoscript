@@ -1,0 +1,14 @@
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+  templateName = Default
+  templateRootPaths {
+    0 = EXT:kuhdist/Resources/Private/ContentElements/Templates
+  }
+  layoutRootPaths {
+    0 = EXT:kuhdist/Resources/Private/ContentElements/Layouts/
+  }
+  partialRootPaths {
+    0 = EXT:kuhdist/Resources/Private/ContentElements/Partials
+  }
+}
+

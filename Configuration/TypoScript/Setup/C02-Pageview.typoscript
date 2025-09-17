@@ -1,0 +1,163 @@
+# -------------------------------------------
+# colPos | Inhalt
+# -------|-----------------------------------
+#      0 | Hauptinhalt
+#      1 | Footer
+#      2 | Header
+#      3 | LeftCol
+#      4 | RightCol
+#      9 | Slider
+#     10 | AdditionalContent/Aside
+#     11 | GE-Boxes/colLeft
+#     12 | GE-colMiddle(or right)
+#     13 | GE-colRight
+#     21 | GE-Accordion/Tabs-Container
+#     22 | GE-Accordion/Tabs-Content
+#     31 | GE-Slider
+#     51 | Intro
+#     52 | Zweispalten (Prospect)
+#     53 | Dreispalten (Customerinfo)
+
+page.10 = PAGEVIEW
+page.10 {
+
+  # Pfad zu den Fluid-Templates, kann überschrieben werden von anderer Extension
+  paths {
+    10 = EXT:kuhdist/Resources/Private/Templates/
+  }
+}
+
+
+# Inhalt holen, aufgeteilt in die colPos aus dem backend_layout
+page.10.dataProcessing {
+  10 = page-content
+  10 {
+    as = pagecontent
+    dataProcessing {
+      10 = files
+      10 {
+        as = images
+        references.fieldName = image
+        references.table = tt_content
+      }
+    }
+  }
+}
+
+
+# auslesen der Medien aus dem aktuellen Page-Record
+page.10.dataProcessing {
+  20 = files
+  20 {
+    as = pagemedia
+    references.fieldName = media
+    references.table = pages
+  }
+}
+
+# Menus erstellen
+page.10.dataProcessing {
+  30 = menu
+  30 {
+    as = mainmenu
+    levels = 3
+    expandAll = 1
+    titleField = nav_title // title
+  }
+
+  40 = menu
+  40 {
+    as = submenu
+    levels = 1
+    entryLevel.data = level
+    expandAll = 1
+    titleField = nav_title // title
+    dataProcessing.10 = files
+    dataProcessing.10 {
+      references.fieldName = media
+      references.table = pages
+    }
+  }
+
+  50 = language-menu
+  50 {
+    languages = auto
+    as = languagemenu
+  }
+
+  110 = menu
+  110 {
+    special = browse
+    as = prevNavigation
+    special {
+      items = prev
+    }
+  }
+
+  115 = menu
+  115 {
+    special = browse
+    as = upNavigation
+    special {
+      items = up
+    }
+  }
+
+  120 = menu
+  120 {
+    special = browse
+    as = nextNavigation
+    special {
+      items = next
+    }
+  }
+
+}
+
+page.10 {
+  variables {
+    homePageTitle = TEXT
+    homePageTitle.data = levelfield : 0, title
+    homePageTitle.stdWrap.override.cObject = TEXT
+    homePageTitle.stdWrap.override.cObject.data = levelfield : 0, nav_title
+    #homePageTitle.stdWrap.override.cObject.stdWrap.override.cObject = TEXT
+    #homePageTitle.stdWrap.override.cObject.stdWrap.override.cObject.data = levelfield : 0, seo_title
+    homePageUid = TEXT
+    homePageUid.data = levelfield : 0, uid
+    homePageSlug = TEXT
+    homePageSlug.data = levelfield : 0, slug
+
+    referer = TEXT
+    referer {
+      data = getIndpEnv : HTTP_REFERER
+    }
+
+    layoutName = TEXT
+    layoutName {
+      cObject = CASE
+      cObject {
+        key.field = layout
+
+        0 = TEXT
+        0.value = Default
+      }
+    }
+
+    #    displaywidth = TEXT
+    #    displaywidth {
+    #      cObject = CASE
+    #      cObject {
+    #        key.field = displaywidth
+    #
+    #        0 = TEXT
+    #        0.value >
+    #
+    #        1 = TEXT
+    #        1.value = breakout
+    #
+    #        2 = TEXT
+    #        2.value = full-width
+    #      }
+    #    }
+  }
+}

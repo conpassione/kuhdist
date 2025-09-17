@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{file.extension} == gif">
+    <f:then>
+        <img src="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'default', height: '{dimensions.height}', maxHeight: '{data.imageheight}', width: '{dimensions.width}px', maxWidth: '{data.imagewidth}')}"
+             width="{f:if(condition: '{data.imagewidth}', then: '{data.imagewidth}px', else: '{dimensions.width}px')}"
+             height="{f:if(condition: '{data.imageheight}', then: '{data.imageheight}px', else: '{dimensions.height}px')}"
+             title="{f:if(condition: '{file.title}', then: '{file.title}')}"
+             alt="{f:if(condition: '{file.alternative}', then: '{file.alternative}', else: '')}"
+             class="gifimage"
+        />
+    </f:then>
+    <f:else>
+        <f:if condition="{file.extension} == svg">
+            <f:then>
+                <img class="cp-responsive-image"
+                     title="{file.title}"
+                     alt="{file.alternative -> f:format.nl2br()}"
+                     style="mask-size: cover; mask-image: url('{f:uri.image(image: file)}'); background-color: var(--_svg-color, black); width: {data.imagewidth}px;"
+                     loading="lazy"
+                />
+            </f:then>
+            <f:else>
+                <picture>
+                    <source srcset="{f:uri.image(image:file, maxWidth: 2561, fileExtension: 'webp', cropVariant: 'default')}" media="(min-width: 1601px)" type="image/webp">
+                    <source srcset="{f:uri.image(image:file, maxWidth: 2560, fileExtension: 'jpg', cropVariant: 'default')}" media="(min-width: 1600px)" type="image/jpeg">
+                    <source srcset="{f:uri.image(image:file, maxWidth: 1601, fileExtension: 'webp', cropVariant: 'medium')}" media="(min-width: 769px)" type="image/webp">
+                    <source srcset="{f:uri.image(image:file, maxWidth: 1600, fileExtension: 'jpg', cropVariant: 'medium')}" media="(min-width: 768px)" type="image/jpeg">
+                    <source srcset="{f:uri.image(image:file, maxWidth: 769, fileExtension: 'webp',  cropVariant: 'small')}" type="image/webp">
+                    <source srcset="{f:uri.image(image:file, maxWidth: 768, fileExtension: 'jpg', cropVariant: 'small')}" type="image/jpeg">
+
+                    <f:if condition="{file.extension} == 'pdf'">
+                        <f:then>
+                            <f:media class="image-embed-item" file="{file}" width="{dimensions.width}px" height="{dimensions.height}px"
+                                     additionalAttributes="alt: {file.alternative}"
+                                     title="{file.title}" />
+                        </f:then>
+                        <f:else>
+                            <img class="cp-responsive-image"
+                                 title="{file.title}"
+                                 alt="{file.alternative -> f:format.nl2br()}"
+                                 src="{f:uri.image(image:file, maxWidth: 1600, cropVariant: 'default')}"
+                                 width="{f:if(condition: '{data.imagewidth}', then: '{data.imagewidth}px', else: '2000px')}"
+                                 height="{f:if(condition: '{data.imageheight}', then: '{data.imageheight}px', else: '2000px')}"
+                                 loading="lazy"
+                            />
+                        </f:else>
+                    </f:if>
+                </picture>
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>
+
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100%" height="100%" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M140,80l0,80l-120,0l0,-160l80,0l0,40l40,40Z" style="fill:rgb(121,165,72);"/>
+    <rect x="45" y="30" width="70" height="100" style="fill:rgb(220,220,220);"/>
+    <path d="M100,0l40,40l-40,0l0,-40Z" style="fill:rgb(170,202,134);"/>
+    <path d="M140,80l-40,-40l40,0l0,40Z" style="fill:rgba(120,142,95,90%);"/>
+</svg>

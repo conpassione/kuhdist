@@ -1,0 +1,98 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:comment><!--MainMenu für alle Seiten (ohne Bilder)--></f:comment>
+
+<f:if condition="{mainmenu}">
+    <nav class="nav-main" role="menu">
+        <ul class="menu-items">
+            <li class="level-0{f:if(condition: '{page.id} == {homePageUid}', then:' active')}">
+                <f:link.page class="menu-item" pageUid="{homePageUid}">
+                    {homePageTitle}
+                </f:link.page>
+            </li>
+            <f:for as="menuItem" each="{mainmenu}">
+                <li class="{f:if(condition: menuItem.active, then:'active ')}level-1">
+                    <f:link.page class="menu-item" pageUid="{menuItem.data.uid}">
+                        {menuItem.title}
+                    </f:link.page>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+
+    <div class="mobilemenu{f:if(condition: '{languagemenu -> f:count()} < 2', then: ' no-inline-end-margin')}">
+        <input aria-haspopup="true" class="hamburger visually-hidden" id="hamburger" role="button" type="checkbox"/>
+        <span class="visually-hidden hamburger-expanded">Menu expanded</span>
+        <span class="visually-hidden hamburger-collapsed">Menu collapsed</span>
+        <label class="hamburger-menu" data-opens-menu for="hamburger">
+            <svg class="hamburger-svg" fill="var(--button-color, black)" viewBox="0 0 100 100">
+                <rect class="line top" height="10" rx="5" width="80" x="10" y="25">
+                </rect>
+                <rect class="line middle" height="10" rx="5" width="80" x="10" y="45">
+                </rect>
+                <rect class="line bottom" height="10" rx="5" width="80" x="10" y="65">
+                </rect>
+            </svg>
+        </label>
+        <label class="hamburger-overlay" for="hamburger" tabindex="-1"></label>
+
+        <nav class="nav-mobile" role="menu">
+            <f:render arguments="{_all}" section="nav-mobile"/>
+        </nav>
+    </div>
+    <f:if condition="{languagemenu -> f:count()} > 1">
+        <div class="lan-menu">
+            <ul class="language-menu" id="language-menu">
+                <f:for as="item" each="{languagemenu}">
+                    <li class="lmenu{f:if(condition: item.active, then: ' active')} {f:if(condition: item.available, else: ' text-muted')}">
+                        <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                            <span><f:format.case>{item.twoLetterIsoCode}</f:format.case></span>
+                        </a>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+    </f:if>
+</f:if>
+
+<f:section name="nav-mobile">
+
+    <ul class="mmenu-items mlevel-1">
+        <li class="mlevel-01{f:if(condition: '{page.id} == {homePageUid}', then:' current')}">
+            <f:link.page class="mmenu-item" pageUid="{homePageUid}">
+                {homePageTitle}
+            </f:link.page>
+        </li>
+        <f:for as="menuItem" each="{mainmenu}">
+            <li class="mlevel-01{f:if(condition: menuItem.current, then:' current')}">
+                <f:link.page class="mmenu-item" pageUid="{menuItem.data.uid}">
+                    {menuItem.title}
+                </f:link.page>
+                <f:if condition="{menuItem.hasSubpages}">
+                    <ul class="mlevel-2">
+                        <f:for as="menuItemc" each="{menuItem.children}">
+                            <li class="mlevel-02{f:if(condition: menuItemc.current, then:' current')}">
+                                <f:link.page class="mmenu-item" pageUid="{menuItemc.data.uid}">
+                                    {menuItemc.title}
+                                </f:link.page>
+                                <f:if condition="{menuItemc.hasSubpages}">
+                                    <ul class="mlevel-3">
+                                        <f:for as="menuItemcc" each="{menuItemc.children}">
+                                            <li class="mlevel-03{f:if(condition: menuItemcc.current, then:' current')}">
+                                                <f:link.page class="mmenu-item" pageUid="{menuItemcc.data.uid}">
+                                                    {menuItemcc.title}
+                                                </f:link.page>
+                                            </li>
+                                        </f:for>
+                                    </ul>
+                                </f:if>
+                            </li>
+                        </f:for>
+                    </ul>
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+
+</f:section>
+</html>

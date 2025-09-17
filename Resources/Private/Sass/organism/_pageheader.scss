@@ -1,0 +1,52 @@
+/* page */
+@use '../settings' as *;
+
+@layer basestyles {
+
+  .headercontent {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name: headercontent;
+    position: relative;
+  }
+
+  .logo {
+    width: 100%;
+    a {
+      z-index: 2;
+    }
+  }
+
+  .logo-graygreen {
+    --_clr-logo: var(--clr-logo);
+    --_clr-logokreis: var(--clr-brand--gray-dark);
+    --_clr-logopfote: #fff;
+    --_clr-logopfote2: var(--clr-brand--primary);
+    --_clr-logohand: #fff;
+    --_clr-logohand2: var(--clr-brand--primary);
+    --_clr-logoslogan: var(--clr-logo);
+  }
+
+  .logo-pink {
+    --_clr-logo: var(--clr-brand--secondary-dark);
+    --_clr-logokreis: var(--clr-brand--secondary-light);
+    --_clr-logopfote: var(--clr-brand--tertiary-dark);
+    --_clr-logopfote2: var(--clr-brand--tertiary-light);
+    --_clr-logohand: var(--clr-brand--tertiary-dark);
+    --_clr-logohand2: var(--clr-brand--tertiary-light);
+    --_clr-logoslogan: var(--clr-brand--secondary);
+  }
+
+  .logo a:focus-visible {
+    @include outline;
+  }
+
+  .svglogo {
+    width: 100%;
+    height: auto;
+  }
+
+}

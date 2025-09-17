@@ -1,0 +1,12 @@
+/* ck-editor */
+
+@use '../settings/color' as *;
+@use '../settings/fonts' as *;
+@use '../atoms/link' as *;
+@use '../atoms/list' as *;
+@use 'ck_editor_inputline' as *;
+
+body > :last-child:not(span) {
+  padding-block-end: 0.5em;
+  border-block-end: 1px solid var(--clr-ckeditor--endline);
+}

@@ -1,0 +1,85 @@
+config {
+  headerComment (
+      created by conPassione gmbh using HTML5, CSS3, www.conpassione.ch
+  )
+  doctype = html5
+  linkVars = L(0-3)
+  absRefPrefix = auto
+  disablePrefixComment = 1
+
+  spamProtectEmailAddresses = -4
+  spamProtectEmailAddresses_atSubst = (at)
+
+  index_enable = 1
+  index_externals = 1
+
+  noPageTitle = 0
+  pageTitle.field = nav_title // title
+  pageTitle.postCObject = TEXT
+  pageTitle.postCObject {
+    field = subtitle // nav_title // title
+    noTrimWrap = | : ||
+    postCObject = TEXT
+    postCObject {
+      data = siteLanguage:websiteTitle
+      noTrimWrap = * | **
+      noTrimWrap.splitChar = *
+    }
+  }
+
+  pageTitleFirst = 1
+  pageTitleSeparator = |
+  pageTitleSeparator.noTrimWrap = | | |
+
+  removeDefaultCss = 1
+  removeDefaultJS = external
+
+  sendCacheHeaders = 1
+  cache_period = 86400
+  cache_clearAtMidnight = 1
+
+
+  #  additionalHeaders {
+  #    10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
+  #    20.header = X-Content-Type-Options: nosniff
+  #    30.header = X-Powered-By: Unicorns
+  #    40.header = Referrer-Policy: same-origin
+  #    60.header = Content-Security-Policy: frame-ancestors 'self'
+  #  }
+}
+
+page = PAGE
+page {
+  typeNum = 0
+  meta {
+    viewport = width=device-width, initial-scale=1.0
+    vieport.replace = 1
+  }
+
+  #  headerData.10 = TEXT
+  #  headerData.10.value (
+  #    <link rel="preload" href="vendor/conpassione/kuhdist/Resources/Public/Fonts/Ubuntu/ubuntu-l-webfont.woff2" as="font" crossorigin>
+  #  )
+  includeCSS {
+    jQueryMagnificPopup = EXT:kuhdist/Resources/Public/Css/vendor/magnific-popup.css
+    globalcss = EXT:kuhdist/Resources/Public/Css/Layout.css
+  }
+
+  includeJSFooterlibs {
+    jQuery37 = EXT:kuhdist/Resources/Public/JavaScript/jquery-3.7.1.slim.min.js
+    jQuery37.forceOnTop = 1
+    jQueryMagnificPopup = EXT:kuhdist/Resources/Public/JavaScript/jquery.magnific-popup.min.js
+    jQueryMagnificPopup.defer = 1
+  }
+
+  includeJSFooter {
+    jQueryMPexec = EXT:kuhdist/Resources/Public/JavaScript/magnific-popup-exec.js
+    jQueryMPexec.async = 1
+    #    event = EXT:kuhdist/Resources/Public/JavaScript/Events.js
+    #    event.async = 1
+    #    event.type = text/javascript
+  }
+
+  jsFooterInline >
+}
+

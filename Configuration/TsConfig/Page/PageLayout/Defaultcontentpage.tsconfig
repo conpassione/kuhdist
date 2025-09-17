@@ -1,0 +1,42 @@
+mod {
+  web_layout {
+    BackendLayouts {
+      DefaultContentPage {
+        title = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.defaultcontentpage.title
+        icon = tx-conpassione-backendlayout
+        config {
+          backend_layout {
+            doktype = 1
+            colCount = 1
+            rowCount = 2
+            rows {
+              1 {
+                columns {
+                  1 {
+                    name = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.col0
+                    identifier = content
+                    colPos = 0
+#                    allowed {
+#                      CType = cp-1col,cp-2cols3366,cp-2cols5050,cp-2cols6633,cp-3cols,cp-textimageleft,cp-textimageright
+#                    }
+                  }
+                }
+              }
+
+              2 {
+                columns {
+                  1 {
+                    name = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
+                    identifier = footer
+                    colPos = 1
+                    slideMode = collect
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

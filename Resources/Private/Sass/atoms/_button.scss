@@ -1,0 +1,49 @@
+/* button */
+
+@use '../settings' as *;
+
+@layer basestyles {
+
+  button[type=submit],
+  .button {
+    /* default colors for primary button */
+    --_clr-btn:          var(--clr-btn, var(--clr-primarybtn--active));
+    --_clr-btnbg:        var(--clr-btnbg, var(--clr-primarybtnbg--active));
+    --_clr-btn--hover:   var(--clr-btn--hover, var(--clr-primarybtn--hover));
+    --_clr-btnbg--hover: var(--clr-btnbg--hover, var(--clr-primarybtnbg--hover));
+    --_btn-font-size:    inherit;
+
+    color:               var(--_clr-btn);
+    background-color:    var(--_clr-btnbg);
+    border-radius:       var(--btn-border-radius), 0;
+    font-size:           var(--_btn-font-size);
+    display:             inline-block;
+    margin-inline-end:   0.25rem;
+    padding:             0.5em 1em;
+
+    &:hover,
+    &:focus {
+      color:            var(--_clr-btn--hover);
+      background-color: var(--_clr-btnbg--hover);
+    }
+  }
+
+  button,
+  .button {
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .button--small {
+    --_font-size: var(--fs-small);
+  }
+
+  .button-secondary {
+    --_clr-btn:          var(---clr-secondarybtn--active);
+    --_clr-btnbg:        var(--clr-secondarybtnbg--active);
+    --_clr-btn--hover:   var(--clr-secondarybtn--hover);
+    --_clr-btnbg--hover: var(--clr-secondarybtnbg--hover);
+  }
+
+}

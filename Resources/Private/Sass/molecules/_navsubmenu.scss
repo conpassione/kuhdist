@@ -1,0 +1,67 @@
+/* page */
+@use '../settings' as *;
+
+@layer basestyles {
+
+  .navsubmenu {
+
+    /* local settings */
+    --_card--gutter:   var(--gutter);
+    --_card--min-size: calc(var(--mediasize--medium) / 4);
+
+    display:                 grid;
+    gap:                     var(--_card--gutter);
+    grid-template-columns:   repeat(auto-fit, minmax(var(--_card--min-size), 1fr));
+    grid-template-rows:      min-content auto 1fr auto;
+    justify-content:         center;
+    padding-inline-start:    0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .navsubmenu--card {
+    /* use default colors */
+    --_card--gutter:   var(--gutter);
+    --_card--color:    var(--clr-text);
+    --_card--border-radius:  var(--border-radius);
+    --_card--btn-color: var(--clr-primarybtn--active);
+    --_card--btnbg-color: var(--clr-primarybtnbg--active);
+    --_card--btn-color--hover: var(--clr-primarybtn--hover);
+    --_card--btnbg-color--hover: var(--clr-primarybtnbg--hover);
+
+    list-style-type:    none;
+    border:             1px solid var(--_card--btnbg-color);
+    border-radius:      var(--_card--border-radius);
+    overflow:           hidden;
+
+    display:            grid;
+    grid-template-rows: subgrid;
+    grid-row:           span 4;
+    gap:                calc(var(--_card--gutter) / 2);
+
+    .navsubmenu--heading {
+      padding-block-start: var(--_card--gutter);
+      padding-inline:      var(--_card--gutter);
+      color: var(--_card--color);
+    }
+
+    .navsubmenu--description {
+      color: var(--_card--color);
+      padding-inline: var(--_card--gutter);
+    }
+
+    a.navsubmenu--link {
+      margin:             0;
+      padding-inline: var(--_card--gutter);
+      align-self:         end;
+      color: var(--_card--btn-color);
+      background-color: var(--_card--btnbg-color);
+      &:hover {
+        color: var(--_card--btn-color--hover);
+        background-color: var(--_card--btnbg-color--hover);
+      }
+    }
+  }
+}

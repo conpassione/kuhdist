@@ -1,0 +1,7 @@
+# RTE Konfiguration
+
+RTE.default.preset = CpDefault
+# RTE.default.preset = CpDefaultCode
+# RTE.default.preset = CpDefaultTable
+# RTE.config.tt_content.bodytext.preset = minimal
+

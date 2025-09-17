@@ -1,0 +1,31 @@
+# TCAdefaults Configuration for pages
+
+TCAdefaults.pages {
+  #TAB-Allgemein
+  #TAB-SEO
+  sitemap_changefreq = monthly
+  #TAB-Metadaten
+  author = {$TCEpage.author}
+  author_email = {$TCEpage.author_email}
+  #TAB-Erscheinungsbild
+  layout = 0
+  #TAB-Verhalten
+  #TAB-Ressourcen
+  #TAB-Sprache
+  #TAB-Zugriff
+  perms_groupid = 1
+  perms_everybody = 1
+  #TAB-Kategorien
+  #TAB-Hinweise
+}
+
+# TCAdefaults Configuration for Content Elements
+
+TCAdefaults.tt_content {
+  header_layout = 2
+  layout = 0
+  frame_class = default
+  imagecols = 1
+  imageorient = 0
+  image_zoom = 1
+}

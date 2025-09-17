@@ -1,0 +1,17 @@
+.build/
+.ddev/
+.DS_Store
+.idea/
+.env
+.stylelintrc.json
+composer.lock
+package.json
+package-lock.json
+/Build/
+/bin/
+/config/
+/node_modules/
+/packages/
+/Resources/Public/ContentBlocks/
+/var/
+/vendor/

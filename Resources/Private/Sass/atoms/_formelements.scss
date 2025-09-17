@@ -1,0 +1,73 @@
+@use '../settings' as *;
+
+@layer basestyles {
+
+  .form-label {
+    // color: rebeccapurple;
+  }
+
+  .form-text {
+    font-size: calc(var(--fs-small) * 0.8);
+  }
+
+  .form-control {
+    padding:          0.25em;
+    color:            var(--clr-input);
+    background-color: var(--clr-input--bg);
+  }
+
+  .error {
+    color: var(--clr-error);
+  }
+
+  input, textarea, select {
+    width:  100%;
+    border: none;
+
+    &:focus-visible {
+      outline: 1px solid var(--clr-brand--primary);
+    }
+  }
+
+  .form-check,
+  .form-check-label {
+    input {
+      margin-inline-end: 0.25em;
+      height:            0.9em;
+      width:             1em;
+      accent-color: var(--clr-primarybtnbg--active);
+    }
+  }
+
+  .form-check-input {
+    width:              auto;
+    padding-inline-end: 0.25em;
+  }
+
+  input:not(:placeholder-shown):valid {
+    outline-color: var(--clr-success);
+  }
+
+  input:not(:placeholder-shown):invalid {
+    outline-color: var(--clr-error);
+  }
+
+  .form-group:has(input[readonly=readonly]) {
+    .form-control {
+      padding-inline: 0;
+      background-color: transparent;
+      color: var(--clr-brand--primary);
+      font-weight: var(--fw-bold);
+    }
+  }
+
+  .form-group:has(input[hidden=hidden]) {
+    padding: 0;
+    display:none;
+    .form-control {
+      height: 0;
+    }
+  }
+
+
+}

@@ -1,0 +1,12 @@
+
+# Add configuration for the editor
+# For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
+editor:
+  config:
+    language:
+      textPartLanguage: [
+        { title: 'Deutsch', languageCode: 'de' },
+        { title: 'English', languageCode: 'en' },
+        { title: 'Français', languageCode: 'fr' },
+        { title: 'Italiano', languageCode: 'fr' }
+      ]

@@ -1,0 +1,13 @@
+# Add configuration for the editor for any configuration
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    # the CSS file to be used inside the editor
+    # contentsCss: [ 'EXT:kuhdist/Resources/Public/Css/Rte.css' ]
+    height: 400
+    width: 'auto'
+    ui:
+      poweredBy:
+        position: 'inside'
+        side: 'right'
+        label: 'conPassione gmbh'

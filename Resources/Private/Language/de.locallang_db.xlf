@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2025-05-18T15:10:46+02:00">
+        <body>
+            <trans-unit id="backendlayout.col0">
+                <source>Content</source>
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.col1">
+                <source>Footer</source>
+                <target>Fusszeile</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.col9">
+                <source>Hero</source>
+                <target>Hero Bilder</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.defaultcontentpage.title">
+                <source>Standard content page</source>
+                <target>Standard-Inhaltsseite</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.detailpage.title">
+                <source>SubPage</source>
+                <target>Detailseite</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.homepage.title">
+                <source>Homepage</source>
+                <target>Startseite</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.submenu">
+                <source>Menu of subpages</source>
+                <target>Menü der Unterseiten</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.submenupage.title">
+                <source>Menupage</source>
+                <target>Verzeichnisseite</target>
+            </trans-unit>
+            <trans-unit id="container.1col">
+                <source>1-Column</source>
+                <target>Einspaltig</target>
+            </trans-unit>
+            <trans-unit id="container.1col.col201">
+                <source>Content</source>
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="container.1col.description">
+                <source>A one column section</source>
+                <target>Einspaltiger Abschnitt</target>
+            </trans-unit>
+            <trans-unit id="container.2cols.col201">
+                <source>Left column</source>
+                <target>Linke Spalte</target>
+            </trans-unit>
+            <trans-unit id="container.2cols.col202">
+                <source>Right column</source>
+                <target>Rechte Spalte</target>
+            </trans-unit>
+            <trans-unit id="container.2cols3366">
+                <source>2-Columns 33-66</source>
+                <target>2-Spalten 33-66</target>
+            </trans-unit>
+            <trans-unit id="container.2cols3366.description">
+                <source>A two columns section</source>
+                <target>Zweispaltiger Abschnitt</target>
+            </trans-unit>
+            <trans-unit id="container.2cols5050">
+                <source>2-Columns 50-50</source>
+                <target>2-Spalten 50-50</target>
+            </trans-unit>
+            <trans-unit id="container.2cols5050.description">
+                <source>A two columns section</source>
+                <target>Zweispaltiger Abschnitt</target>
+            </trans-unit>
+            <trans-unit id="container.2cols6633">
+                <source>2-Columns 66-33</source>
+                <target>2-Spalten 66-33</target>
+            </trans-unit>
+            <trans-unit id="container.2cols6633.description">
+                <source>A two columns sesction</source>
+                <target>Zweisprachiger Abschnitt</target>
+            </trans-unit>
+            <trans-unit id="container.3cols">
+                <source>3-Columns</source>
+                <target>3-Spalten</target>
+            </trans-unit>
+            <trans-unit id="container.3cols.col201">
+                <source>Left column</source>
+                <target>Linke Spalte</target>
+            </trans-unit>
+            <trans-unit id="container.3cols.col202">
+                <source>Middle column</source>
+                <target>Mittlere Spalte</target>
+            </trans-unit>
+            <trans-unit id="container.3cols.col203">
+                <source>Right column</source>
+                <target>Rechte Spalte</target>
+            </trans-unit>
+            <trans-unit id="container.3cols.description">
+                <source>A three column section</source>
+                <target>Dreispaltiger Abschnitte</target>
+            </trans-unit>
+            <trans-unit id="contentwizard.z-cpextensions.groupLabel">
+                <source>Additional extensions</source>
+                <target>Zusätzliche Funktionen</target>
+            </trans-unit>
+            <trans-unit id="contentwizard.z-cplayout.groupLabel">
+                <source>Design elements</source>
+                <target>Gestalterische Elemente</target>
+            </trans-unit>
+            <trans-unit id="crop.default.free.title">
+                <source>free</source>
+                <target>frei</target>
+            </trans-unit>
+            <trans-unit id="crop.default.title">
+                <source>Desktop</source>
+                <target>Desktop</target>
+            </trans-unit>
+            <trans-unit id="crop.medium.free.title">
+                <source>free</source>
+                <target>frei</target>
+            </trans-unit>
+            <trans-unit id="crop.medium.title">
+                <source>Tablet</source>
+                <target>Tablet</target>
+            </trans-unit>
+            <trans-unit id="crop.small.free.title">
+                <source>free</source>
+                <target>frei</target>
+            </trans-unit>
+            <trans-unit id="crop.small.title">
+                <source>Mobile</source>
+                <target>Mobile</target>
+            </trans-unit>
+            <trans-unit id="fe_users.column.email2">
+                <source>Club email</source>
+                <target>Club E-Mail</target>
+            </trans-unit>
+            <trans-unit id="fe_users.column.mobile">
+                <source>Mobile</source>
+                <target>Handy</target>
+            </trans-unit>
+            <trans-unit id="fe_users.column.status">
+                <source>Status</source>
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="fe_users.column.status.0.label">
+                <source>---</source>
+                <target>---</target>
+            </trans-unit>
+            <trans-unit id="fe_users.column.status.1.label">
+                <source>active</source>
+                <target>aktiv</target>
+            </trans-unit>
+            <trans-unit id="pagetype.staff.label">
+                <source>Staff</source>
+                <target>Funktionäre</target>
+            </trans-unit>
+            <trans-unit id="pagewizard.agenda.groupLabel">
+                <source>Agenda</source>
+                <target>Agenda</target>
+            </trans-unit>
+            <trans-unit id="pagewizard.gallery.groupLabel">
+                <source>Gallery</source>
+                <target>Galerie</target>
+            </trans-unit>
+            <trans-unit id="pagewizard.landingpage.groupLabel">
+                <source>Landingpages</source>
+                <target>Startseiten</target>
+            </trans-unit>
+            <trans-unit id="recordType.groupname">
+                <source>conPassione</source>
+                <target>conPassione</target>
+            </trans-unit>
+            <trans-unit id="rte.codeblock.kbd">
+                <source>Keystroke</source>
+                <target>Tastatureingabe</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.fb-link--icon">
+                <source>Marked link to FaceBook</source>
+                <target>FaceBook Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.file-link">
+                <source>Link to File</source>
+                <target>Dateilink</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.file-link--icon">
+                <source>Marked link to File</source>
+                <target>Dateilink mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.folder-link">
+                <source>Link to Folder</source>
+                <target>Verzeichnislink</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.folder-link--icon">
+                <source>Marked link to Folder</source>
+                <target>Verzeichnislink mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.github-link--icon">
+                <source>Marked link to github</source>
+                <target>Github Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.insta-link--icon">
+                <source>Marked link to Instagram</source>
+                <target>Instagram Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.linkedin-link--icon">
+                <source>Marked link to LinedIn</source>
+                <target>LinedIn Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.mail-link">
+                <source>Link to eMail</source>
+                <target>E-Mail Link</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.mail-link--icon">
+                <source>Marked link to eMail</source>
+                <target>E-Mail-Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.page-link">
+                <source>Link to Page</source>
+                <target>Seitenlink</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.page-link--icon">
+                <source>Marked link to Page</source>
+                <target>Seitenlink mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.phone-link">
+                <source>Link to Phonenumber</source>
+                <target>Telefon-Nummer Link</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.phone-link--icon">
+                <source>Marked link to Phonenumber</source>
+                <target>Telefon-Nummer Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.pinterest-link--icon">
+                <source>Marked link to pinterest</source>
+                <target>Pinterest Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.url-link">
+                <source>Link to URL</source>
+                <target>URL-Link</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.url-link--icon">
+                <source>Marked link to URL</source>
+                <target>URL-Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.vimeo-link--icon">
+                <source>Market link to vimeo</source>
+                <target>Vimeo Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.youtube-link--icon">
+                <source>Market link to youtube</source>
+                <target>Youtube Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.style.blockquote">
+                <source>Blockquote</source>
+                <target>Zitat</target>
+            </trans-unit>
+            <trans-unit id="rte.style.labelaccent">
+                <source>Accent</source>
+                <target>Hervorhebung</target>
+            </trans-unit>
+            <trans-unit id="rte.style.labelbig">
+                <source>Big font</source>
+                <target>grösserer Font</target>
+            </trans-unit>
+            <trans-unit id="rte.style.labelsmall">
+                <source>Small font</source>
+                <target>kleinerer Font</target>
+            </trans-unit>
+            <trans-unit id="rte.style.paragraph">
+                <source>Paragraph</source>
+                <target>Absatz</target>
+            </trans-unit>
+            <trans-unit id="rte.toolbar.items.table">
+                <source>Table</source>
+                <target>Tabelle</target>
+            </trans-unit>
+            <trans-unit id="tceform.frame_class.labeldefault">
+                <source>Standard</source>
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.labelh1">
+                <source>Header H1</source>
+                <target>Haupttitel H1</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.labelh2">
+                <source>Header H2</source>
+                <target>Titel H2</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.labelh3">
+                <source>Title H3</source>
+                <target>Titel H3</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.labelh4">
+                <source>Subtitle H4</source>
+                <target>Untertitel H4</target>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.leftbottom">
+                <source>bottom left</source>
+                <target>untenlinks</target>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.leftmiddle">
+                <source>left middle</source>
+                <target>mittelinks</target>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.rightbottom">
+                <source>bottom right</source>
+                <target>untenrechts</target>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.rightmiddle">
+                <source>right middle</source>
+                <target>mitterechts</target>
+            </trans-unit>
+            <trans-unit id="tceform.layout.label0">
+                <source>Default</source>
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.layout.0">
+                <source>Default</source>
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.layout.36650001">
+                <source>Homepage with footer</source>
+                <target>Startseite mit Fusszeile</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.layout.label">
+                <source>Pagelayout</source>
+                <target>Seitenlayout</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.media.label">
+                <source>Images</source>
+                <target>Bilder</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.nav_title.label">
+                <source>Navigation Title</source>
+                <target>Navigationstitel (Menü)</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.subtitle.label">
+                <source>Pageheader descirptiv</source>
+                <target>Langer Seitentitel</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.title.label">
+                <source>Pagetree title</source>
+                <target>URL und Seitenbaumtitel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.contentlayout">
+                <source>Content width</source>
+                <target>Breite des Inhalts</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.contentlayout.item0">
+                <source>normal</source>
+                <target>normal</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.contentlayout.item1">
+                <source>breakout</source>
+                <target>verbreitert</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.contentlayout.item2">
+                <source>full-width</source>
+                <target>volle Breite</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout">
+                <source>Display width</source>
+                <target>Breite des Abschnitts</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout.item0">
+                <source>normal</source>
+                <target>normal</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout.item1">
+                <source>breakout</source>
+                <target>verbreitert</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout.item2">
+                <source>full-width</source>
+                <target>volle Breite</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.accent">
+                <source>greyed</source>
+                <target>grau</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.brandcolor">
+                <source>colored</source>
+                <target>farbig</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.breakout-accent">
+                <source>breakout greyed</source>
+                <target>verbreitert grau</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.breakout-brandcolor">
+                <source>breakout colored</source>
+                <target>verbreitert farbig</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.full-width-accent">
+                <source>full-width grayed</source>
+                <target>volle Breite grau</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.full-width-brandcolor">
+                <source>full-width colored</source>
+                <target>volle Breite farbig</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

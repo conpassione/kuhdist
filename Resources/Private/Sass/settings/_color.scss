@@ -1,0 +1,66 @@
+/* cp_base:constants */
+
+@layer basestyles {
+  /* Baseline Colors */
+  /* as css constants (light theme) */
+  :root {
+    --clr-bw-000:                  oklch(0 0 0);
+    --clr-bw-010:                  oklch(0.1 0 0);
+    --clr-bw-020:                  oklch(0.2 0 0);
+    --clr-bw-030:                  oklch(0.3 0 0);
+    --clr-bw-040:                  oklch(0.4 0 0);
+    --clr-bw-050:                  oklch(0.5 0 0);
+    --clr-bw-060:                  oklch(0.6 0 0);
+    --clr-bw-070:                  oklch(0.7 0 0);
+    --clr-bw-080:                  oklch(0.8 0 0);
+    --clr-bw-090:                  oklch(0.9 0 0);
+    --clr-bw-095:                  oklch(0.95 0 0);
+    --clr-bw-100:                  oklch(1 0 0);
+
+    --clr-success:                 oklch(0.5 0.12 150);
+    --clr-info:                    oklch(0.5 0.12 220);
+    --clr-error:                   oklch(0.5 0.12 0);
+
+    --clr-brand--primary:          oklch(0.6 0.1906 139.38);
+    --clr-brand--primary-dark:     oklch(0.5 0.1906 139.38);
+    --clr-brand--primary-light:    oklch(0.7 0.1906 139.38);
+    --clr-brand--primary-dimmed:   oklch(0.8 0.1906 139.38);
+    --clr-brand--secondary:        oklch(0.6 0.1906 265.46);
+    --clr-brand--secondary-dark:   oklch(0.5 0.1906 265.46);
+    --clr-brand--secondary-light:  oklch(0.7 0.1906 265.46);
+    --clr-brand--secondary-dimmed: oklch(0.8 0.1906 265.46);
+    --clr-brand--tertiary:         oklch(0.6 0.1906 330.62);
+    --clr-brand--tertiary-dark:    oklch(0.5 0.1906 330.62);
+    --clr-brand--tertiary-light:   oklch(0.7 0.1906 330.62);
+    --clr-brand--tertiary-dimmed:  oklch(0.8 0.1906 330.62);
+    --clr-brand--gray:             var(--clr-bw-060);
+    --clr-brand--gray-dark:        var(--clr-bw-050);
+    --clr-brand--gray-light:       var(--clr-bw-070);
+    --clr-brand--gray-dimmed:      var(--clr-bw-080);
+
+    /* rte */
+    --clr-ckeditor--text:          var(--clr-bw-020);
+    --clr-ckeditor--bg:            var(--clr-bw-100);
+    --clr-ckeditor--endline:       var(--clr-error);
+
+    /* ============================ */
+    /* Color Theme light            */
+    /* ============================ */
+
+    color-scheme: light;
+    /* application colors */
+    --clr-text:                     var(--clr-brand--gray-dark);
+    --clr-background:               var(--clr-bw-100);
+    --clr-logo:                     var(--clr-brand--gray-dark);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      /* application colors */
+      --clr-text:                  var(--clr-bw-100);
+      --clr-background:            var(--clr-bw-020);
+      --clr-logo:                  var(--clr-bw-100);
+    }
+  }
+}

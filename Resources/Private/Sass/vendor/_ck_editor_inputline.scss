@@ -1,0 +1,46 @@
+/* ck-editor */
+
+@use '../settings/color' as *;
+@use '../settings/fonts' as *;
+
+html {
+  min-height: auto;
+}
+
+body:not(.ck-style-panel) {
+  font-family:      var(--ff);
+  font-size:        18px;
+  color:            var(--clr-ckeditor--text);
+  background-color: var(--clr-ckeditor--bg);
+  min-height: auto;
+}
+
+h3, .h3 {
+  font-size: 26px;
+  font-family: var(--ff-h);
+}
+h4, .h4 {
+  font-size: 22px;
+  font-family: var(--ff-h);
+}
+strong {
+  font-weight: bold;
+}
+
+.cp-accent {
+  color: var(--clr-accent);
+}
+
+.cp-zitat {
+  font-size:     120%;
+  color:         var(--clr-accent);
+  padding-block: var(--gutter);
+}
+
+.fs-small {
+  font-size: 16px;
+}
+
+.fs-big {
+  font-size: 22px;
+}

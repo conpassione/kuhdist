@@ -1,0 +1,19 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<div class="breadcrumbmenu fs-small">
+    <f:for as="breadcrumb" each="{page.localRootLine}" iteration="ibreadcrumb">
+        <f:if condition="{ibreadcrumb.isLast}">
+            <f:then>
+                <span>{breadcrumb.nav_title}</span>
+            </f:then>
+            <f:else>
+                <f:if condition="{breadcrumb.nav_hide} === 0">
+                    <f:link.page pageUid="{breadcrumb.uid}">{breadcrumb.nav_title}</f:link.page>
+                    <f:if condition="{page.id} != {breadcrumb.uid}">&nbsp;>>&nbsp;</f:if>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:for>
+</div>
+
+</html>

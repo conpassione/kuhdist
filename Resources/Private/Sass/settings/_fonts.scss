@@ -1,0 +1,63 @@
+/* fonts */
+
+@layer basestyles {
+  @font-face {
+    font-family: 'Symbols';
+    src:         url('../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff');
+    font-weight: normal;
+    font-style:  normal;
+  }
+
+  /* =============================== */
+  :root {
+    /* fontfaces */
+    --ff:              system-ui, sans-serif;
+    --ff-condensed:    system-ui, sans-serif;
+    --ff-serif:        Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    --ff-h:            system-ui, sans-serif;
+    --ff-nav:          system-ui, sans-serif;
+    --ff-mono:         'Nimbus Mono PS', 'Courier New', monospace;
+    --ff-symbol:       'Symbols';
+
+    /* font weight */
+    --fw-regular:      300;
+    --fw-mono:         400;
+    --fw-bold:         700;
+
+    /* font size */
+    --fs-fix--small:  16px;
+    --fs-fix--normal: 18px;
+    --fs-fix--big:    24px;
+
+    /* line height */
+    --lh-regular:      1.5;
+    --lh-small:        1.2;
+
+    --lh-h:            var(--lh-small);
+
+    /* regular font */
+    --fs-regular:      clamp(var(--fs-fix--normal), (100vw - 960px) / 100 + var(--fs-fix--normal), var(--fs-fix--big));
+    --fs-big:          calc(var(--fs-regular) * 1.125);
+    --fs-small:        calc(var(--fs-regular) * 0.875);
+
+    font-size:         var(--fs-regular);
+    line-height:       var(--lh-regular);
+
+  }
+
+  .fs-big {
+    font-size: var(--fs-big);
+    line-height: 1.8;
+  }
+  .fs-small {
+    font-size: var(--fs-small);
+  }
+
+  .iconfont {
+    font-family:           var(--ff-symbol), sans-serif;
+    font-feature-settings: "liga" 1, "dlig" 1;
+    content:               '';
+    padding-inline-start:  0.1em;
+    padding-inline-end:    0.2em;
+  }
+}

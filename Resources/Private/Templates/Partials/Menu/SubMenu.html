@@ -1,0 +1,45 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{submenu}">
+    <section class="section-submenu" id="s-submenu">
+        <nav class="submenu" id="submenu">
+            <ul class="navsubmenu">
+                <f:for as="navItem" each="{submenu}">
+                    <li class="navsubmenu--card">
+                        <f:if condition="{navItem.files}">
+                            <f:then>
+                                <a href="{navItem.link}" tabindex="-1" title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')} {navItem.title}">
+                                    <f:cObject data="{header: '', showcaption:'0', files: navItem.files}" table="tt_content" typoscriptObjectPath="tt_content.image"/>
+                                </a>
+                            </f:then>
+                            <f:else>
+                                <a href="{navItem.link}" tabindex="-1" title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')} {navItem.title}">
+                                    &nbsp;
+                                </a>
+                            </f:else>
+                        </f:if>
+                        <h2 class="navsubmenu--heading h4-font">
+                            <a href="{navItem.link}" tabindex="-1" title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')} {navItem.title}">{navItem.title}</a>
+                        </h2>
+                        <f:if condition="{cp_status} == 0">
+                            <f:then>
+                                <p class="navsubmenu--description">
+                                    <a href="{navItem.link}" tabindex="-1"
+                                       title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')} {navItem.title}">{navItem.data.description}</a>
+                                </p>
+                            </f:then>
+                            <f:else>
+                                <p>&nbsp;</p>
+                            </f:else>
+                        </f:if>
+                        <a class="button navsubmenu--link" href="{navItem.link}" title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')} {navItem.title}">
+                            <span class="iconfont">right</span> {navItem.title}
+                        </a>
+                    </li>
+                </f:for>
+            </ul>
+        </nav>
+    </section>
+</f:if>
+
+</html>

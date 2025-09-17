@@ -1,0 +1,11 @@
+name: conpassione/detailpage
+typeName: 36650012
+title: Detailpage
+group: conpassione
+description: Das ist die Standard-Inhaltsseite
+prefixFields: false
+fields:
+  - identifier: subtitle
+    useExistingField: true
+
+

@@ -1,0 +1,56 @@
+@use '../settings' as *;
+
+@layer basestyles {
+
+  form {
+    --_clr-border: oklch(from var(--clr-background) calc(l * .9) c h);
+    border:        1px solid var(--clr-accent);
+    border-radius: var(--border-radius);
+    padding:       var(--gutter);
+  }
+
+  fieldset {
+    border: 0;
+  }
+
+  .row {
+    display:               grid;
+    gap:                   var(--gutter);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    .form-check {
+      padding-block-start: calc(1rem * var(--lh-regular));
+    }
+  }
+
+  .form-group {
+    padding-block-end: var(--gutter);
+
+    .form-group {
+      padding: 0;
+    }
+  }
+
+
+  .table {
+    border-collapse: collapse;
+    border-block:    calc(var(--gutter) / 2) solid var(--_clr-border);
+
+    tr:nth-child(even) {
+      background-color: var(--_clr-border);
+    }
+
+    td {
+      padding: 3px;
+    }
+  }
+
+  .summary-table-first-col {
+    width: 50%;
+  }
+
+  .form-h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: var(--clr-h);
+  }
+}

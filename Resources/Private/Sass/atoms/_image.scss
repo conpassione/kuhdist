@@ -1,0 +1,196 @@
+/* images */
+
+@use '../settings' as *;
+
+@layer basestyles {
+
+  /* @docs
+  label: Responsive Images
+
+      note: |
+          These new elements display inline by default,
+          but that's not the expected behavior for either one.
+          This can interfere with proper layout and aspect-ratio handling.
+
+          1. Remove the unnecessary wrapping `picture`, while maintaining contents
+          2. Source elements have nothing to display, so we hide them entirely
+
+  category: embedded elements
+  */
+  picture {
+    display: contents;
+  }
+
+  /* @docs
+  label: Aspect Ratios
+
+      note: |
+          Maintain intrinsic aspect ratios when `max-width` is applied.
+          `iframe`, `embed`, and `object` are also embedded,
+          but have no intrinsic ratio,
+          so their `height` needs to be set explicitly.
+
+  category: embedded elements
+  */
+  img, svg, video, canvas, figure {
+    //height:    auto;
+    //width: 100%;
+    //display:   block;
+  }
+
+  figure {
+    position: relative;
+    // inline-size: fit-content;
+    // margin-inline: auto;
+  }
+
+  figcaption {
+    position:        absolute;
+    left:            0;
+    right:           0;
+    bottom:          0;
+    padding:         0.25em;
+    font-size:       var(--fs-small);
+    backdrop-filter: blur(0.5em);
+    background-color: rgba(var(--clr-bw-100) / 0.4);
+    // contain: inline-size;
+  }
+
+  img {
+    // max-width: 100%;
+  }
+
+  .cp-image {
+    container-type: inline-size;
+  }
+
+  .cp-image:not(:last-child) {
+    margin-block-end: calc(var(--gutter) * 2);
+  }
+
+  .gallery {
+    --grid-min-col-size: 250px;
+    display:             grid;
+    gap:                 var(--gutter);
+
+    &.columns1 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &.columns2 {
+      grid-template-columns: repeat(1, 1fr);
+      @container (width > 480px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &.columns3 {
+      grid-template-columns: repeat(1, 1fr);
+      @container (width > 480px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @container (width > 740px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &.columns4 {
+      grid-template-columns: repeat(1, 1fr);
+      @container (width > 480px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @container (width > 740px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @container (width > 960px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    &.columnssized1 {
+      grid-template-columns: repeat(1, minmax(min-content, var(--gallery-imagewidth)));
+    }
+
+    &.columnssized2 {
+      grid-template-columns: repeat(1, minmax(min-content, var(--gallery-imagewidth)));
+      @container (width > 480px) {
+        grid-template-columns: repeat(2, minmax(min-content, var(--gallery-imagewidth)));
+      }
+    }
+
+    &.columnssized3 {
+      grid-template-columns: repeat(1, minmax(min-content, var(--gallery-imagewidth)));
+      @container (width > 480px) {
+        grid-template-columns: repeat(2, minmax(min-content, var(--gallery-imagewidth)));
+      }
+      @container (width > 740px) {
+        grid-template-columns: repeat(3, minmax(min-content, var(--gallery-imagewidth)));
+      }
+    }
+
+    &.columnssized4 {
+      grid-template-columns: repeat(1, minmax(min-content, var(--gallery-imagewidth)));
+      @container (width > 480px) {
+        grid-template-columns: repeat(2, minmax(min-content, var(--gallery-imagewidth)));
+      }
+      @container (width > 740px) {
+        grid-template-columns: repeat(3, minmax(min-content, var(--gallery-imagewidth)));
+      }
+      @container (width > 960px) {
+        grid-template-columns: repeat(4, minmax(min-content, var(--gallery-imagewidth)));
+      }
+    }
+
+    &.orientation0 {
+      justify-content: center;
+    }
+
+    &.orientation1 {
+      justify-content: end;
+    }
+
+    &.orientation2 {
+      justify-content: start;
+    }
+  }
+}
+
+.mfp-zoom-in {
+
+  /* start state */
+  .mfp-with-anim {
+    opacity:    0;
+    transform:  scale(0.8);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.mfp-bg {
+    opacity:    0;
+    transition: all 0.3s ease-out;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity:   1;
+      transform: scale(1);
+    }
+
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      opacity:   0;
+      transform: scale(0.8);
+    }
+
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+}

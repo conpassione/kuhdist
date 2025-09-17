@@ -1,0 +1,217 @@
+/* link */
+
+@use '../settings' as *;
+
+@layer basestyles {
+
+  %link {
+    color:                    currentColor;
+    background-color:         inherit;
+    /*text-decoration:  none;*/
+    text-decoration-color:    var(--clr-brand--primary);
+    text-decoration-skip-ink: auto;
+    text-decoration-style:    dotted;
+
+    &:focus-visible {
+      /*text-decoration: none;*/
+      outline: 0;
+    }
+  }
+
+  %link-iconbefore {
+    @extend %link;
+
+    &:before {
+      font-family:           var(--ff-symbol), sans-serif;
+      font-feature-settings: "liga" 1, "dlig" 1;
+      content:               '';
+      padding-inline-start:  0.1em;
+      padding-inline-end:    0.25em;
+    }
+  }
+
+  %link-iconafter {
+    @extend %link;
+
+    &:after {
+      font-family:           var(--ff-symbol), sans-serif;
+      font-feature-settings: "liga" 1, "dlig" 1;
+      content:               '';
+      padding-inline-start:  0.1em;
+      padding-inline-end:    0.2em;
+    }
+  }
+
+  a {
+    @extend %link;
+  }
+
+  a:focus-visible {
+    @include outline;
+  }
+
+  a:not([class]) {
+    @extend %link;
+    text-decoration-skip-ink: auto;
+  }
+
+  .page-link--icon {
+    @extend %link-iconbefore;
+    hyphens: auto;
+
+    &:before {
+      content: 'right';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .file-link--icon {
+    @extend %link-iconbefore;
+    hyphens: auto;
+
+    &:before {
+      content: 'download';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .folder-link--icon {
+    @extend %link-iconbefore;
+    hyphens: auto;
+
+    &:before {
+      content: 'folder';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .url-link--icon {
+    @extend %link-iconbefore;
+    hyphens: auto;
+
+    &:before {
+      content: 'external';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .phone-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'phone';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .mail-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'mail';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .fb-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'facebook';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .insta-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'instagram';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .linkedin-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'linkedin';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .pinterest-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'pinterest';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .github-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'github';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .youtube-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'youtube';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .vimeo-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'vimeo';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+}

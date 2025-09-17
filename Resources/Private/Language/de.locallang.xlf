@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" original="EXT:kuhdist/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="kuhdist" date="2024-12-02T21:43:40+01:00">
+        <header></header>
+        <body>
+            <trans-unit id="generator" resname="generator">
+                <source>The &#34;Generator&#34; Meta Tag.</source>
+                <target>Das &#34;Generator&#34; Meta Tag.</target>
+            </trans-unit>
+            <trans-unit id="headerComment" resname="headerComment">
+                <source>The default Header Comment.</source>
+                <target>Titelkommentar vorgegeben.</target>
+            </trans-unit>
+            <trans-unit id="submenu.navitem.linktitle" resname="submenu.navitem.linktitle">
+                <source>Link to page</source>
+                <target>Link zur Seite</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

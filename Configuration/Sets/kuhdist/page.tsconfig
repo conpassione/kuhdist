@@ -1,0 +1,2 @@
+@import 'EXT:kuhdist/Configuration/TsConfig/Page/*.tsconfig'
+@import 'EXT:kuhdist/Configuration/TsConfig/Page/PageLayout/*.tsconfig'

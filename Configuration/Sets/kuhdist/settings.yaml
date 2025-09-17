@@ -1,0 +1,8 @@
+# default settings, should be overwritten
+
+TCEpage:
+  author: 'kuhdist'
+  author_email: info@kindundhund.ch
+  author_phone: '+41790000000'
+  org_name: 'kuhdist'
+  org_logo: ''

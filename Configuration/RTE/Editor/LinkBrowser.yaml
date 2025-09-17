@@ -1,0 +1,163 @@
+# Additional TYPO3 specific configuration comes here.
+# See https://docs.typo3.org/c/typo3/cms-rte-ckeditor/main/en-us/Configuration/Reference.html
+# This is unrelated to CKEditor itself, but applies to Link Browser usage:
+
+# Which fields can be shown with additional attributes for a link? (comma separated list)
+# - target: Link target (allows to use '_blank', "_self", "_top" or a framename)
+# - title:  Link title attribute (not the link text itself)
+# - class:  Custom CSS class selection
+# - params: Additional URL query arguments (see "queryParametersSelector" below when used)
+# - rel:    Link relation attribute ("rel", see "relAttribute" below when used)
+allowedOptions: 'target,title,class,params,rel'
+
+# Comma-separated list of allowed Link Types
+# Valid LinkTypes:
+# - page:   page TYPO3 page
+# - file:   TYPO3 file relation
+# - folder: TYPO3 folder relation
+# - url:    External URL
+# - telephone: Telephon number
+# - email:  Mail address
+# - ...:    Custom Link Types, when implemented, with their name.
+allowedTypes: 'page,file,folder,url,telephone,email'
+
+# Which class definitions and targets are allowed per LinkType (array)
+# Each array element has attributes:
+# - "class":  Default CSS class to apply to this LinkType
+# - "type":   LinkType as listed above
+# - "target": Default link target to apply to this LinkType
+classesAnchor:
+  - { class: 'page-link', type: 'page', target: '_top', name: 'Seitenlink' }
+  - { class: 'page-link--icon', type: 'page', target: '_top', name: 'Seitenlink mit Icon' }
+  - { class: 'file-link', type: 'file', target: '_blank' }
+  - { class: 'file-link--icon', type: 'file', target: '_blank' }
+  - { class: 'folder-link', type: 'folder', target: '_blank' }
+  - { class: 'folder-link--icon', type: 'folder', target: '_blank' }
+  - { class: 'url-link', type: 'url', target: '_blank' }
+  - { class: 'url-link--icon', type: 'url', target: '_blank' }
+  - { class: 'phone-link', type: 'telephone', target: '_blank' }
+  - { class: 'phone-link--icon', type: 'telephone', target: '_blank' }
+  - { class: 'mail-link', type: 'email',target: '_blank' }
+  - { class: 'mail-link--icon', type: 'email', target: '_blank' }
+  - { class: 'fb-link--icon', type: 'url', target: '_blank' }
+  - { class: 'insta-link--icon', type: 'url', target: '_blank' }
+  - { class: 'linkedin-link--icon', type: 'url', target: '_blank' }
+  - { class: 'pinterest-link--icon', type: 'url', target: '_blank' }
+  - { class: 'github-link--icon', type: 'url', target: '_blank' }
+  - { class: 'youtube-link--icon', type: 'url', target: '_blank' }
+  - { class: 'vimeo-link--icon', type: 'url', target: '_blank' }
+
+buttons:
+  link:
+    # Global Link Browser options
+    options:
+      # Optional comma-separated list of Link Types to be specifically removed
+      removeItems: 'folder'
+    # Specifically enable the "rel" attribute entry, needed when set in "allowedOptions"
+    relAttribute:
+        enabled: true
+    # Specifically enable the "params" (URL query arguments) attribute entry, needed when set in "allowedOptions"
+    queryParametersSelector:
+        enabled: false
+    # Optionally disable showing the "target" field (even though when set in "allowedOptions")
+    targetSelector:
+      disabled: false
+
+    # Define general CSS options for the Link Browser
+    # This is needed to perform any of the link classing below!
+    properties:
+      class:
+        # If set to "true", a CSS class must be selected
+        required: true
+        # Available CSS linkbrowser
+        allowedClasses:
+        - page-link
+        - page-link--icon
+        - file-link
+        - file-link--icon
+        - folder-link
+        - folder-link--icon
+        - url-link
+        - url-link--icon
+        - phone-link
+        - phone-link--icon
+        - mail-link
+        - mail-link--icon
+        - fb-link--icon
+        - insta-link--icon
+        - linkedin-link--icon
+        - pinterest-link--icon
+        - github-link--icon
+        - youtube-link--icon
+        - vimeo-link--icon
+
+    # Define default CSS linkbrowser per LinkType. The CSS class name listed here
+    # must also be part of the "allowedClasses" attribute above.
+    # The attribute "required" is also available for each block.
+    page:
+      properties:
+        class:
+          default: 'page-link--icon'
+    file:
+      properties:
+        class:
+          default: 'file-link--icon'
+    folder:
+      properties:
+        class:
+          default: 'folder-link--icon'
+    url:
+      properties:
+        class:
+          default: 'url-link--icon'
+    telephone:
+      properties:
+        class:
+          default: 'phone-link--icon'
+    email:
+      properties:
+        class:
+          default: 'mail-link--icon'
+
+# Optionally define labels for all linkbrowser listed in buttons.link.properties.class.allowedClasses
+# Also the style of a CSS class choice can be applied via "value" (deprecated, does not work in all browsers).
+# Any label missing in this setup just uses the CSS classname as a label, without special formatting.
+classes:
+  page-link:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.page-link'
+  page-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.page-link--icon'
+  file-link:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.file-link'
+  file-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.file-link--icon'
+  folder-link:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.folder-link'
+  folder-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.folder-link--icon'
+  url-link:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.url-link'
+  url-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.url-link--icon'
+  phone-link:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.phone-link'
+  phone-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.phone-link--icon'
+  mail-link:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.mail-link'
+  mail-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.mail-link--icon'
+  fb-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.fb-link--icon'
+  insta-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.insta-link--icon'
+  linkedin-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.linkedin-link--icon'
+  pinterest-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.pinterest-link--icon'
+  github-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.github-link--icon'
+  youtube-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.youtube-link--icon'
+  vimeo-link--icon:
+    name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.vimeo-link--icon'

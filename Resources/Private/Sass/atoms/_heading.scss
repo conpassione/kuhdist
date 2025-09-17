@@ -1,0 +1,61 @@
+/* headings */
+
+@use '../settings' as *;
+
+@layer basestyles {
+  /* reset */
+  h1, h2, h3, h4, h5, h6 {
+    font-size:   var(--fs-regular);
+    line-height: var(--lh-h);
+    font-family: var(--ff-h), sans-serif;
+    font-weight: var(--fw-regular);
+    margin:      0;
+    hyphens:     auto;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    text-wrap: balance;
+    color:     var(--clr-h);
+  }
+
+  .h1-font,
+  .h1 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+
+  .h1 {
+    padding-block:    0.25em;
+    margin-block-end: 0.25em;
+    color:            var(--clr-bw-090);
+  }
+
+  .h2-font,
+  .h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+
+  .h2 {
+    margin-block-end: 0.5em;
+    color:            var(--clr-h);
+  }
+
+  .h3-font,
+  .h4-font,
+  .h3,
+  .h4 {
+    font-size: clamp(1.1rem, 1.75vw, 2rem);
+  }
+
+  .h3,
+  .h4 {
+    margin-block-end: 0.5em;
+  }
+
+  .h3 {
+    color: var(--clr-h);
+  }
+
+}

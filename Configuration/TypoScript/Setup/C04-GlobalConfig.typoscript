@@ -1,0 +1,16 @@
+plugin.tx_seo {
+  config {
+    xmlSitemap {
+      sitemaps {
+        pages {
+          config {
+            # cat=plugin.tx_seo/sitemap; type=string; label=Doktypes to exclude
+            excludedDoktypes := addToList(3, 4, 6, 7, 199, 254, 255)
+            # cat=plugin.tx_seo/sitemap; type=string; label=Additional where clause
+            additionalWhere = no_index = 0
+          }
+        }
+      }
+    }
+  }
+}

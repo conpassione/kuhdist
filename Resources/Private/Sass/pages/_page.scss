@@ -1,0 +1,73 @@
+/* page */
+@use '../settings' as *;
+
+@layer basestyles {
+
+  body {
+    /* overflow-y:     scroll; */
+    container-type: inline-size;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+
+/*   @media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+      scroll-behavior: smooth;
+      scroll-padding-top: 3rem;
+    }
+  } */
+
+  header {
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    width: 100vw;
+    background-color: var(--clr-headerbg);
+    z-index: 10;
+  }
+
+  main {
+    margin-block-start: 60px;
+    container: main / inline-size;
+    align-content: start;
+  }
+
+  .content-grid {
+    --padding-inline: 1rem;
+    --content-max-width: var(--mediasize--large);
+    --breakout-size: 15ch;
+
+    display: grid;
+    grid-template-columns:
+      [full-width-start]
+      minmax(var(--padding-inline), 1fr)
+      [breakout-start]
+      minmax(0, var(--breakout-size))
+      [content-start]
+      min(var(--content-max-width) / 2, 50% - var(--padding-inline))
+      [centerline]
+      min(var(--content-max-width) / 2, 50% - var(--padding-inline))
+      [content-end]
+      minmax(0, var(--breakout-size))
+      [breakout-end]
+      minmax(var(--padding-inline), 1fr)
+      [full-width-end];
+  }
+
+  .content-grid > * {
+    grid-column: content;
+  }
+
+  .content-grid > .breakout,
+  .content-grid > .breakout-accent,
+  .content-grid > .breakout-brandcolor {
+    grid-column: breakout;
+  }
+
+  .content-grid > .full-width,
+  .content-grid > .full-width-accent,
+  .content-grid > .full-width-brandcolor {
+    grid-column: full-width;
+  }
+
+}

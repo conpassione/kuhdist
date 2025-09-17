@@ -1,0 +1,93 @@
+@use '../settings' as *;
+
+@layer basestyles {
+
+  p {
+    max-width: 900ch;
+    text-wrap: pretty;
+    orphans:   inherit;
+    /* hyphens: auto;*/
+  }
+
+  .cp-text:not(:last-child) {
+    margin-block-end: calc(var(--gutter) * 2);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-end {
+    text-align: end;
+  }
+
+  .text-justify {
+    text-align: justify;
+  }
+
+  .cp-zitat {
+    font-size:     120%;
+    color:         var(--clr-accent);
+    padding-block: var(--gutter);
+  }
+
+  p + h1 {
+    margin-block-start: calc(var(--gutter) * 2);
+  }
+
+  p + h2,
+  p + h3,
+  p + h4 {
+    margin-block-start: calc(var(--gutter) * 1.5);
+  }
+
+  pre {
+    font-family: var(--ff-mono), monospace;
+    font-size:   1rem;
+    line-height: var(--lh-small);
+  }
+
+  pre:has(code),
+  pre[data-language] {
+    padding:          1em;
+    background-color: var(--clr-code--bg);
+    border:           1px solid var(--clr-code--bc);
+    line-height:      var(--lh-small);
+  }
+
+  /* pre:has(.cpcss),
+  pre[data-language="CSS"] {
+    --code-bg: var(--clr-text);
+    --code-bc: var(--clr-bw-090);
+  } */
+  kbd {
+    font-family: var(--ff-mono), monospace;;
+    background:  inherit;
+    color:       inherit;
+  }
+
+  b,
+  strong {
+    font-weight: 700;
+  }
+
+  i {
+    font-style: italic;
+  }
+
+  .cp-accent {
+    color: var(--clr-accent);
+  }
+
+  .cp-bold {
+    font-weight: 700;
+  }
+
+  i.icon {
+    font-family: var(--ff-symbol), sans-serif;
+    font-size:   inherit;
+    font-style:  normal;
+    color:       inherit;
+  }
+
+}

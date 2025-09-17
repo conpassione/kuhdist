@@ -1,0 +1,207 @@
+TCEFORM.pages {
+  #TAB-Allgemein
+  title.label = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.page.title.label
+  # nav_title.disabled = 1
+  nav_title.label = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.page.nav_title.label
+  # subtitle.disabled = 1
+  subtitle.label = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.page.subtitle.label
+  // Remove unwanted doktypes (1:Standard, 3:Externe URL, 4:Shortcut, 6:BE-Bereich, 7:Mountpoint, 199:Abstand, 254:Sysordner, 255:Recycler, --div--:Trennlinie
+  doktype.removeItems = 6,7,199,255,--div--
+  #TAB-SEO
+  # no_index.disabled = 1
+  # no_follow.disabled = 1
+  sitemap_changefreq = monthly
+
+  #TAB-Social Media
+  #TAB-Metadaten
+  #TAB-Erscheinungsbild
+  layout {
+    disabled = 1
+    label = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.label
+    disableNoMatchingValueElement = 1
+    # layout field TYPO3 Standard labels removed in TCA/Overrides/pages.php
+    # => use addItems only
+    addItems {
+      0 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.0
+    }
+  }
+
+  backend_layout {
+    disabled = 1
+    disableNoMatchingValueElement = 1
+  }
+
+  backend_layout_next_level {
+    disabled = 1
+    disableNoMatchingValueElement = 1
+  }
+
+  newUntil.disabled = 1
+  #TAB-Verhalten
+  php_tree_stop.disabled = 1
+  content_from_pid.disabled = 1
+  target.disabled = 1
+  cache_timeout.disabled = 1
+  cache_tags.disabled = 1
+
+  #TAB-Ressourcen
+  media.label = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.page.media.label
+  #TAB-Sprache
+  #TAB-Zugriff
+  #TAB-Kategorien
+  #TAB-Hinweis
+}
+
+[! backend.user.isAdmin]
+  # Definition der Seitenattribute für Redaktoren
+  TCEFORM.pages {
+    #TAB-Allgemein
+    #TAB-SEO
+    #TAB-Social Media
+    #TAB-Metadaten
+    #TAB-Erscheinungsbild
+    #TAB-Verhalten
+    is_siteroot.disabled = 1
+    no_search.disabled = 1
+    module.disabled = 1
+    #TAB-Ressourcen
+    tsconfig_includes.disabled = 1
+    TSconfig.disabled = 1
+    #TAB-Sprache
+    l18n_cfg.disabled = 1
+    #TAB-Zugriff
+    fe_group.disabled = 1
+    #TAB-Kategorien
+    #TAB-Hinweis
+  }
+[END]
+
+
+#[!backend.user.isAdmin]
+#TCEFORM.tt_content.CType.removeItems:=addToList(bullets, textpic, table, upload)
+#TCEFORM.tt_content.CType.removeItems:=addToList(html, div)
+#[end]
+
+TCEFORM.tt_content {
+  # Allgemein
+  CType.removeItems := addToList(header,textpic,textmedia,bullets,table,uploads,html,div)
+
+  colPos.disabled = 1
+  header_layout {
+    removeItems = 0,5
+    altLabels {
+      1 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh1
+      2 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh2
+      3 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3
+      4 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4
+    }
+  }
+
+  header_position.disabled = 1
+  date.disabled = 1
+  # header_link
+  subheader.disabled = 1
+
+  #Erscheinungsbild
+  #layout
+  layout {
+    disabled = 1
+    addItems {
+      0 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.layout.label0
+    }
+  }
+
+  # Definition der Rahmen und Hintergründe
+  frame_class {
+    disabled = 1
+    addItems {
+      default = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.frame_class.labeldefault
+    }
+  }
+
+  space_before_class.disabled = 1
+  space_after_class.disabled = 1
+  linkToTop.disabled = 1
+
+  # Kategorien
+  categories.disabled = 1
+
+  # Medien/Bilder
+  imageheight.disabled = 1
+  imageborder.disabled = 1
+
+  # Zugriff
+  editlock.disabled = 1
+
+  # Hinweise
+  # rowDescription.disabled = 1
+}
+
+TCEFORM.tt_content {
+  sectionlayout {
+    addItems {
+      accent = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.accent
+      breakout-accent = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.breakout-accent
+      full-width-accent = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.full-width-accent
+      brandcolor = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.brandcolor
+      breakout-brandcolor = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.breakout-brandcolor
+      full-width-brandcolor = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.full-width-brandcolor
+    }
+  }
+}
+
+[! backend.user.isAdmin]
+  TCEFORM.tt_content {
+    CType.removeItems := addToList(list)
+    fe_group.disabled = 1
+  }
+[END]
+
+# Bildausrichtungen
+#  0 oben-mittig     -> above center
+#  1 oben-rechts     -> above right
+#  2 oben-links      -> above left
+#  8 unten-mittig    -> below center
+#  9 unten-rechts    -> below right
+# 10 unten-links     -> below left
+# 17 rechts floating -> intext right
+# 18 links floating  -> intext left
+# 25 oben-rechts     -> intext right noWrap
+# 26 oben-links      -> intext left noWrap
+# 31 mitte-rechts    -> intext right middle noWrap
+# 32 mitte-links     -> intext left middle noWrap
+# 33 unten-rechts    -> intext right below noWrap
+# 34 unten-links     -> intext left below noWrap
+TCEFORM.tt_content.imageorient {
+  removeItems = 17,18
+  #addItems {
+  # Neben dem Text mitterechts
+  #31 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightmiddle
+  #31.icon = tx-conpassione-content-beside-text-img-right-middle
+  #  Neben dem Text mittelinks
+  #32 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftmiddle
+  #32.icon = tx-conpassione-content-beside-text-img-left-middle
+  # Neben dem Text untenrechts
+  #33 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightbottom
+  #33.icon = tx-conpassione-content-beside-text-img-right-bottom
+  # Nebem dem Text untenlinks
+  #34 = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftbottom
+  #34.icon = tx-conpassione-content-beside-text-img-left-bottom
+  #}
+  # types.image.removeItems = 8,9,10,17,18,25,26,31,32,33,34
+  types.image.removeItems = 8,9,10,17,18,25,26
+}
+
+# Anzahl Spalten begrenzen
+TCEFORM.tt_content.imagecols {
+  removeItems = 5,6,7,8
+}
+
+# fe-users
+TCEFORM.fe_users {
+  company.disabled = 1
+  title.disabled = 1
+  name.disabled = 1
+  middle_name.disabled = 1
+  fax.disabled = 1
+}

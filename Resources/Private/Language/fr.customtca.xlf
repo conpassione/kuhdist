@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2024-11-10T18:12:06+01:00">
+        <body>
+            <trans-unit id="pages.tabs.resources" resname="pages.tabs.resources">
+                <source>Images</source>
+                <target>Images</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

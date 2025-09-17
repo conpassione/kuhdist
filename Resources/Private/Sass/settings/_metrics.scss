@@ -1,0 +1,24 @@
+/* metrics */
+
+@layer basestyles {
+
+  :root {
+    --gutter: 1rem;
+    --container-gutter: 2rem;
+    --flow-spacer: 1em;
+
+    --border-radius: 5px;
+    --border-width: 1px;
+    --border-style: solid;
+
+    --mediasize--small: 480px;
+    --mediasize--halfmedium: 720px;
+    --mediasize--medium: 960px;
+    --mediasize--large: 1200px;
+
+    --blocksize--small: 200px;
+    --blocksize--medium: 360px;
+    --blocksize--big: 480px;
+  }
+}
+

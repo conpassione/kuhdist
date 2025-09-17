@@ -1,0 +1,101 @@
+identifier: simple-messaged
+label: 'Einfaches Anfrageformular'
+type: Form
+prototypeName: standard
+renderingOptions:
+  submitButtonLabel: Absenden
+finishers:
+  - identifier: EmailToSender
+    options:
+      subject: 'Bestätigungsmail'
+      recipients:
+        '{email}': '{lastname} {firstname}'
+      senderAddress: 'info@conpassione.ch'
+      senderName: 'conPassione gmbh'
+      addHtmlPart: true
+      attachUploads: false
+      title: 'Deine Anfrage'
+  - identifier: EmailToReceiver
+    options:
+      subject: 'Anfrage von {lastname} {firstname}'
+      recipients:
+        info@conpassione.ch: 'conPassione gmbh'
+      senderAddress: '{email}'
+      senderName: '{lastname} {firstname}'
+      addHtmlPart: true
+      attachUploads: false
+      title: 'Anfrage via Website von {firstname} {lastname}'
+  - identifier: Confirmation
+    options:
+      message: 'Besten Dank für Deine Anfrage. Du bekommst innerhalb einer Woche Antwort von uns.'
+      contentElementUid: ''
+renderables:
+  - type: Page
+    identifier: smpage-1
+    renderables:
+      - type: GridRow
+        identifier: gridrow-2
+        label: 'Person'
+        renderables:
+          - identifier: lastname
+            defaultValue: ''
+            type: Text
+            label: 'Name'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              - identifier: NotEmpty
+          - identifier: firstname
+            defaultValue: ''
+            type: Text
+            label: 'Vorname'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              - identifier: NotEmpty
+      - identifier: gridrow-4
+        type: GridRow
+        label: 'Kommunikation'
+        renderables:
+          - defaultValue: ''
+            type: Text
+            identifier: mobile
+            label: 'Mobiltelefon'
+            properties:
+              elementDescription: ''
+          - identifier: email
+            defaultValue: ''
+            type: Text
+            label: E-Mail
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                - code: 1221559976
+                  message: 'Die E-Mail ist für die Kommunikation nötig, bitte gültige E-Mail erfassen.'
+            validators:
+              - identifier: EmailAddress
+              - identifier: NotEmpty
+      - identifier: sm-message
+        defaultValue: ''
+        type: Textarea
+        label: 'Mitteilung'
+      - type: Checkbox
+        identifier: confirmation
+        label: 'Ich bin einverstanden, dass die erfassten Daten für die Zwecke der Veranstaltung verwendet werden.'
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            - code: 1221560910
+              message: 'Bitte Verwendung der Daten zustimmen.'
+        validators:
+          - identifier: NotEmpty
+      - identifier: sm-recinfo
+        properties:
+          text: '* Pflichtfelder'
+        type: StaticText
+        label: ''

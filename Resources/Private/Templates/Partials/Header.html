@@ -1,0 +1,14 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<div class="headercontent">
+    <f:render partial="Header/Logo" arguments="{_all}"/>
+    <f:render partial="Menu/MainMenu" arguments="{
+        page: page,
+        mainmenu: mainmenu,
+        languagemenu: languagemenu,
+        homePageTitle: homePageTitle,
+        homePageSlug: homePageSlug,
+        homePageUid: homePageUid
+    }"/>
+</div>
+</html>

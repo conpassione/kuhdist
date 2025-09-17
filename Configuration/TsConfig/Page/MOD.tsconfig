@@ -1,0 +1,61 @@
+# Linkvalidator konfigurieren
+mod.linkvalidator.linkhandler.reportHiddenRecords = 1
+
+# New ContentElement Wizard konfigurieren
+
+# Konfiguration des Content-Elements Wizards
+# mod.wizards.newContentElement.wizardItems.default {
+#  elements {
+#    shortcut < mod.wizards.newContentElement.wizardItems.special.elements.shortcut
+#  }
+#  show:=addToList(shortcut)
+# }
+
+mod.wizards.newContentElement.wizardItems {
+  default {
+    # header,text,textpic,image,textmedia
+    removeItems := addToList(header,textpic,textmedia)
+  }
+
+  lists {
+    # bullets,table,uploads
+    removeItems := addToList(bullets,table,uploads)
+  }
+
+  special {
+    # shortcut
+    removeItems := addToList(html,div)
+  }
+}
+
+[! backend.user.isAdmin]
+  mod.wizards.newContentElement.wizardItems {
+    forms {
+      removeItems := addToList(felogin_login)
+    }
+  }
+[END]
+
+# mod.wizards.newContentElement.wizardItems.sliders {
+#  header = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.groupLabel
+#  elements {
+#    cpdevsite_testce {
+#      iconIdentifier = tx-conpassione-alfabeta
+#      title = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.label
+#      description = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.description
+#      tt_content_defValues {
+#        CType = cpdevsite_testce
+#      }
+#    }
+#  }
+#  show:=addToList(cpdevsite_testce)
+#}
+
+
+module.tx_form {
+  settings {
+    yamlConfigurations {
+      36650 = EXT:cpdevsite/Configuration/Form/CpFormSetup.yaml
+    }
+  }
+}
