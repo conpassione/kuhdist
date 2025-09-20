@@ -39,13 +39,13 @@ config {
   cache_clearAtMidnight = 1
 
 
-  #  additionalHeaders {
-  #    10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
-  #    20.header = X-Content-Type-Options: nosniff
-  #    30.header = X-Powered-By: Unicorns
+  additionalHeaders {
+    10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
+    20.header = X-Content-Type-Options: nosniff
+    30.header = X-Powered-By: Unicorns
   #    40.header = Referrer-Policy: same-origin
   #    60.header = Content-Security-Policy: frame-ancestors 'self'
-  #  }
+  }
 }
 
 page = PAGE
@@ -65,6 +65,15 @@ page {
     globalcss = EXT:kuhdist/Resources/Public/Css/Layout.css
   }
 
+  includeJSLibs {
+    topwire = EXT:topwire/Resources/Public/JavaScript/topwire.js
+    topwire.type = module
+    topwire.async = 1
+    topwire.defer = 1
+    topwire.disableCompression = 1
+    topwire.excludeFromConcatenation = 1
+  }
+
   includeJSFooterlibs {
     jQuery37 = EXT:kuhdist/Resources/Public/JavaScript/jquery-3.7.1.slim.min.js
     jQuery37.forceOnTop = 1
@@ -75,6 +84,7 @@ page {
   includeJSFooter {
     jQueryMPexec = EXT:kuhdist/Resources/Public/JavaScript/magnific-popup-exec.js
     jQueryMPexec.async = 1
+
     #    event = EXT:kuhdist/Resources/Public/JavaScript/Events.js
     #    event.async = 1
     #    event.type = text/javascript

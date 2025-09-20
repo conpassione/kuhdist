@@ -1,27 +1,31 @@
 # CKE-Editor CpBase-Configuration
 # Load default processing options
 imports:
-  - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Editor/Base.yaml' }
-  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
-  - { resource: 'EXT:kuhdist/Configuration/RTE/Editor/Processing.yaml' }
-  - { resource: 'EXT:kuhdist/Configuration/RTE/Editor/Base.yaml' }
+  - {resource: 'EXT:rte-ckeditor/Configuration/RTE/Editor/Base.yaml'}
+  - {resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml'}
+  - {resource: 'EXT:kuhdist/Configuration/RTE/Editor/Processing.yaml'}
+  - {resource: 'EXT:kuhdist/Configuration/RTE/Editor/Base.yaml'}
 
 # Add configuration for the editor
-# For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
+# For complete documentation
+# see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
+
 editor:
   config:
+    editor:
     allowedContent: true
     enableContextMenu: false
     forcePasteAsPlainText: true
     clipboard_defaultContentType: 'text'
     # the CSS file to be used inside the editor
     contentsCss: 'EXT:kuhdist/Resources/Public/Css/Rte_inputline.css'
+    height: fit-content
     toolbar:
       items:
         - bold
         - italic
         - specialCharacters
-        #- underline
+        # - underline
         - softhyphen
         - sourceEditing
 
@@ -32,7 +36,7 @@ editor:
       showCharCount: true
 
     autoParagraph: false
-    enterMode: 2 # <br> instead of <p>
+    enterMode: 2  # <br> instead of <p>
 
     extraPlugins:
       - wordcount

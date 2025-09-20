@@ -1,0 +1,16 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+
+<f:layout name="Layout-{page.pagerecord.layout}"/>
+
+<f:section name="Main">
+    <f:for as="record" each="{pagecontent.content.records}">
+        <f:cObject
+            data="{record.rawRecord}"
+            table="tt_content"
+            typoscriptObjectPath="tt_content.{record.CType}"
+        />
+    </f:for>
+</f:section>
+
+</html>

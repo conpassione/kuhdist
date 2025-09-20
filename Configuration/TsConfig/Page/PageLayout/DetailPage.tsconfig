@@ -2,7 +2,7 @@ mod {
   web_layout {
     BackendLayouts {
       DetailPage {
-        title = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.detailpage.title
+        title = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.detailpage.title
         icon = tx-conpassione-backendlayout-simplepage
         config {
           backend_layout {
@@ -13,7 +13,7 @@ mod {
               1 {
                 columns {
                   1 {
-                    name = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col9
+                    name = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.col9
                     identifier = hero
                     colPos = 9
                     allowed {
@@ -27,7 +27,7 @@ mod {
               2 {
                 columns {
                   1 {
-                    name = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col0
+                    name = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.col0
                     identifier = content
                     colPos = 0
 #                    allowed {
@@ -40,7 +40,7 @@ mod {
               3 {
                 columns {
                   1 {
-                    name = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
+                    name = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
                     identifier = footer
                     colPos = 1
                     slideMode = collect

@@ -6,24 +6,24 @@ editor:
     # contentsCss:
     #   - "EXT:kuhdist/Resources/Public/Css/Rte.css"
 
-    #htmlSupport:
+    # htmlSupport:
     #  allow:
     #    - { name: 'p', attributes: true, classes: true, styles: true }
 
     style:
       definitions:
         # block level styles
-        - { name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.labelbig', element: 'p', classes: [ 'fs-big' ] }
-        - { name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.labelsmall', element: 'p', classes: [ 'fs-small' ] }
+        - {name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.labelbig', element: 'p', classes: ['fs-big']}
+        - {name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.labelsmall', element: 'p', classes: ['fs-small']}
         # Inline styles
-        - { name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.labelaccent', element: 'span', classes: [ 'cp-accent' ] }
-        #- { name: 'accent', element: 'span', classes: [ 'cp-accent' ] }
+        - {name: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.labelaccent', element: 'span', classes: ['cp-accent']}
+        # - { name: 'accent', element: 'span', classes: [ 'cp-accent' ] }
 
 
     heading:
       options:
-        - { model: 'paragraph', view: 'p', title: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.paragraph' }
-        - { model: 'zitat', view: { name: 'p', classes: 'cp-zitat' }, title: 'Zitat', class: 'cp-zitat', converterPriority: 'high' }
-        - { model: 'heading3', view: { name: 'h3', classes: 'h3' }, title: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3', class: 'h3' }
-        - { model: 'heading4', view: { name: 'h4', classes: 'h4' }, title: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4', class: 'h4' }
-        #- { model: 'blockquote', view: 'blockquote', title: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.quote' }
+        - {model: 'paragraph', view: 'p', title: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.paragraph'}
+        - {model: 'zitat', view: {name: 'p', classes: 'cp-zitat'}, title: 'Zitat', class: 'cp-zitat', converterPriority: 'high'}
+        - {model: 'heading3', view: {name: 'h3', classes: 'h3'}, title: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3', class: 'h3'}
+        - {model: 'heading4', view: {name: 'h4', classes: 'h4'}, title: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4', class: 'h4'}
+        # - { model: 'blockquote', view: 'blockquote', title: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.style.quote'}

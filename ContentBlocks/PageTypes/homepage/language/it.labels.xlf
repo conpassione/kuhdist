@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="it" original="" datatype="plaintext" date="2025-06-17T16:29:46+02:00">
+		<body>
+			<trans-unit id="description">
+				<source>Used as Homepage</source>
+				<target>Homepage</target>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Homepage</source>
+				<target>Homepage</target>
+			</trans-unit>
+			<trans-unit id="cp_status.label">
+				<source>Display</source>
+				<target>Display</target>
+			</trans-unit>
+			<trans-unit id="cp_status.items.0.label">
+				<source>Show SEO description</source>
+				<target>mostra SEO</target>
+			</trans-unit>
+			<trans-unit id="cp_status.items.1.label">
+				<source>Hide SEO description</source>
+				<target>hide SEO</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

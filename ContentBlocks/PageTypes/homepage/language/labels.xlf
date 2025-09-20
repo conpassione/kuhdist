@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" original="Labels.xlf" datatype="plaintext" product-name="conpassione/submenupage" date="2025-06-17T16:29:46+02:00">
+		<header></header>
+		<body>
+			<trans-unit id="description">
+				<source>Used as Homepage</source>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Homepage</source>
+			</trans-unit>
+			<trans-unit id="cp_status.label">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="cp_status.items.0.label">
+				<source>Show SEO description</source>
+			</trans-unit>
+			<trans-unit id="cp_status.items.1.label">
+				<source>Hide SEO description</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -26,6 +26,7 @@
 		"helhum/dotenv-connector": "*",
 		"ichhabrecht/content-defender": "^3.5",
 		"lavitto/typo3-gridgallery": "^1.2",
+		"topwire/topwire": "^1.1",
 		"typo3/cms-adminpanel": "^13",
 		"typo3/cms-backend": "^13",
 		"typo3/cms-belog": "^13",

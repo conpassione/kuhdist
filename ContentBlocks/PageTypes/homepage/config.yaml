@@ -1,0 +1,18 @@
+name: conpassione/homepage
+typeName: 36650001
+title: HomePage
+group: conpassione
+description: Use this as Rootpage of your Website
+prefixFields: false
+fields:
+  - identifier: subtitle
+    useExistingField: true
+  - identifier: cp_status
+    type: Radio
+    label: "Display SEO"
+    defaultValue: 0
+    items:
+      - label: 'show SEO'
+        value: 0
+      - label: 'hide SEO'
+        value: 1

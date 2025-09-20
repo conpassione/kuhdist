@@ -1,0 +1,21 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:asset.css href="{cb:assetPath()}/frontend.css" identifier="textimagel-css"/>
+
+<div class="textimageleft {data.sectionlayout}" id="ce{data.uid}">
+    <f:cObject
+        data="{header:'', showcaption:'0', files: data.image}"
+        table="tt_content"
+        typoscriptObjectPath="tt_content.image"
+    />
+    <div class="textimageleft-text">
+        <f:cObject
+            data="{data}"
+            table="tt_content"
+            typoscriptObjectPath="tt_content.header"
+        />
+        <f:format.html>{data.bodytext}</f:format.html>
+    </div>
+</div>

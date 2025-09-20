@@ -23,7 +23,7 @@ call_user_func(static function (): void {
         'CType',
         'z-cpextensions',
         'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:contentwizard.z-cpextensions.groupLabel',
-        'after:default'
+        'after:forms'
     );
     // Zusätzliche Gruppe im newContentWizard erstellen
     ExtensionManagementUtility::addTcaSelectItemGroup(

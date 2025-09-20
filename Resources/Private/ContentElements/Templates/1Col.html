@@ -1,0 +1,29 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<section
+    class="cp-1col{f:if(condition: '{data.sectionlayout}  && {data.sectionlayout} != \'accent\'  && {data.sectionlayout} != \'brandcolor\'', then:' content-grid {data.sectionlayout}', else:' {data.sectionlayout}')}"
+    id="s{data.uid}">
+    <f:if condition="{data.header}">
+        <f:cObject
+            data="{data}"
+            table="tt_content"
+            typoscriptObjectPath="tt_content.header"
+        />
+    </f:if>
+    <div class="cp-1col--content{f:if(condition: data.contentlayout, then:' {data.contentlayout}')}">
+        <div class="cp-col201">
+            <f:for as="record" each="{children_201}">
+                <f:if condition="{record.CType} === 'form_formframework'">
+                    <f:cObject
+                        data="{record}"
+                        table="tt_content"
+                        typoscriptObjectPath="tt_content.header"
+                    />
+                </f:if>
+                <f:format.raw>{record.renderedContent}</f:format.raw>
+            </f:for>
+        </div>
+    </div>
+</section>
+
+</html>

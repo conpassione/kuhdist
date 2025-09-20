@@ -7,7 +7,7 @@ options.pageTree.showDomainNameWithTitle = 1
 options.pageTree.showPathAboveMounts = 1
 // options.pageTree.showNavTitle = 1
 options.pageTree.doktypesToShowInNewPageDragArea = 1,254
-// options.pageTree.doktypesToShowInNewPageDragArea := addToList(36650001,36650011,36650012)
+options.pageTree.doktypesToShowInNewPageDragArea := addToList(36650001,36650011,36650012)
 // options.pageTree.doktypesToShowInNewPageDragArea:=removeFromList()
 
 // Toolbar

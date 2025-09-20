@@ -7,17 +7,16 @@ editor:
     # load modules for plugins when CKEditor is initialized
     # see CKEditor plugin API for details
     importModules:
-       #- { 'module': '@ckeditor/ckeditor5-font', 'exports': ['Font'] }
-      - { module: '@ckeditor/ckeditor5-show-blocks', exports: [ 'ShowBlocks' ] }
-      - { module: '@ckeditor/ckeditor5-word-count', exports: [ 'WordCount' ] }
-      - { module: '@ckeditor/ckeditor5-find-and-replace', exports: [ 'FindAndReplace' ] }
-      - { module: '@ckeditor/ckeditor5-paste-from-office', exports: [ 'PasteFromOffice' ] }
-      - { module: '@ckeditor/ckeditor5-clipboard', exports: [ 'Clipboard' ] }
-      - { module: '@ckeditor/ckeditor5-language', exports: ['TextPartLanguage'] }
+       # - { 'module': '@ckeditor/ckeditor5-font', 'exports': ['Font'] }
+      - {module: '@ckeditor/ckeditor5-show-blocks', exports: ['ShowBlocks']}
+      - {module: '@ckeditor/ckeditor5-word-count', exports: ['WordCount']}
+      - {module: '@ckeditor/ckeditor5-find-and-replace', exports: ['FindAndReplace']}
+      - {module: '@ckeditor/ckeditor5-paste-from-office', exports: ['PasteFromOffice']}
+      - {module: '@ckeditor/ckeditor5-clipboard', exports: ['Clipboard']}
+      - {module: '@ckeditor/ckeditor5-language', exports: ['TextPartLanguage']}
 
     # Configure global wordCount plugin defaults
     # Overwrite them in your RTE presets as it is necessary
     wordCount:
       displayWords: true
       displayCharacters: true
-

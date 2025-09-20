@@ -27,25 +27,25 @@ allowedTypes: 'page,file,folder,url,telephone,email'
 # - "type":   LinkType as listed above
 # - "target": Default link target to apply to this LinkType
 classesAnchor:
-  - { class: 'page-link', type: 'page', target: '_top', name: 'Seitenlink' }
-  - { class: 'page-link--icon', type: 'page', target: '_top', name: 'Seitenlink mit Icon' }
-  - { class: 'file-link', type: 'file', target: '_blank' }
-  - { class: 'file-link--icon', type: 'file', target: '_blank' }
-  - { class: 'folder-link', type: 'folder', target: '_blank' }
-  - { class: 'folder-link--icon', type: 'folder', target: '_blank' }
-  - { class: 'url-link', type: 'url', target: '_blank' }
-  - { class: 'url-link--icon', type: 'url', target: '_blank' }
-  - { class: 'phone-link', type: 'telephone', target: '_blank' }
-  - { class: 'phone-link--icon', type: 'telephone', target: '_blank' }
-  - { class: 'mail-link', type: 'email',target: '_blank' }
-  - { class: 'mail-link--icon', type: 'email', target: '_blank' }
-  - { class: 'fb-link--icon', type: 'url', target: '_blank' }
-  - { class: 'insta-link--icon', type: 'url', target: '_blank' }
-  - { class: 'linkedin-link--icon', type: 'url', target: '_blank' }
-  - { class: 'pinterest-link--icon', type: 'url', target: '_blank' }
-  - { class: 'github-link--icon', type: 'url', target: '_blank' }
-  - { class: 'youtube-link--icon', type: 'url', target: '_blank' }
-  - { class: 'vimeo-link--icon', type: 'url', target: '_blank' }
+  - {class: 'page-link', type: 'page', target: '_top', name: 'Seitenlink'}
+  - {class: 'page-link--icon', type: 'page', target: '_top', name: 'Seitenlink mit Icon'}
+  - {class: 'file-link', type: 'file', target: '_blank'}
+  - {class: 'file-link--icon', type: 'file', target: '_blank'}
+  - {class: 'folder-link', type: 'folder', target: '_blank'}
+  - {class: 'folder-link--icon', type: 'folder', target: '_blank'}
+  - {class: 'url-link', type: 'url', target: '_blank'}
+  - {class: 'url-link--icon', type: 'url', target: '_blank'}
+  - {class: 'phone-link', type: 'telephone', target: '_blank'}
+  - {class: 'phone-link--icon', type: 'telephone', target: '_blank'}
+  - {class: 'mail-link', type: 'email', target: '_blank'}
+  - {class: 'mail-link--icon', type: 'email', target: '_blank'}
+  - {class: 'fb-link--icon', type: 'url', target: '_blank'}
+  - {class: 'insta-link--icon', type: 'url', target: '_blank'}
+  - {class: 'linkedin-link--icon', type: 'url', target: '_blank'}
+  - {class: 'pinterest-link--icon', type: 'url', target: '_blank'}
+  - {class: 'github-link--icon', type: 'url', target: '_blank'}
+  - {class: 'youtube-link--icon', type: 'url', target: '_blank'}
+  - {class: 'vimeo-link--icon', type: 'url', target: '_blank'}
 
 buttons:
   link:
@@ -55,10 +55,10 @@ buttons:
       removeItems: 'folder'
     # Specifically enable the "rel" attribute entry, needed when set in "allowedOptions"
     relAttribute:
-        enabled: true
+      enabled: true
     # Specifically enable the "params" (URL query arguments) attribute entry, needed when set in "allowedOptions"
     queryParametersSelector:
-        enabled: false
+      enabled: false
     # Optionally disable showing the "target" field (even though when set in "allowedOptions")
     targetSelector:
       disabled: false
@@ -71,25 +71,25 @@ buttons:
         required: true
         # Available CSS linkbrowser
         allowedClasses:
-        - page-link
-        - page-link--icon
-        - file-link
-        - file-link--icon
-        - folder-link
-        - folder-link--icon
-        - url-link
-        - url-link--icon
-        - phone-link
-        - phone-link--icon
-        - mail-link
-        - mail-link--icon
-        - fb-link--icon
-        - insta-link--icon
-        - linkedin-link--icon
-        - pinterest-link--icon
-        - github-link--icon
-        - youtube-link--icon
-        - vimeo-link--icon
+          - page-link
+          - page-link--icon
+          - file-link
+          - file-link--icon
+          - folder-link
+          - folder-link--icon
+          - url-link
+          - url-link--icon
+          - phone-link
+          - phone-link--icon
+          - mail-link
+          - mail-link--icon
+          - fb-link--icon
+          - insta-link--icon
+          - linkedin-link--icon
+          - pinterest-link--icon
+          - github-link--icon
+          - youtube-link--icon
+          - vimeo-link--icon
 
     # Define default CSS linkbrowser per LinkType. The CSS class name listed here
     # must also be part of the "allowedClasses" attribute above.

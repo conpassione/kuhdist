@@ -1,0 +1,29 @@
+name: conpassione/staff
+typeName: staff
+title: 'Staff'
+table: tx_conpassione_staff
+prefixFields: false
+languageAware: true
+labelField:
+  - function
+  - feuser
+security:
+  ignorePageTypeRestriction: true
+
+fields:
+  - identifier: function
+    type: Text
+    label: 'Function'
+    required: true
+  - identifier: feuser
+    type: Select
+    renderType: selectSingle
+    foreign_table: fe_users
+    foreign_table_where: 'AND {#fe_users}.{#status}>0'
+    label: 'FE-User'
+    labelField: name
+  - identifier: responsibility
+    type: Textarea
+    label: 'Responsibility'
+    rows: 6
+    enableRichtext: true

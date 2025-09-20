@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="it" datatype="plaintext" original="Labels.xlf" date="2024-05-01T12:29:50+00:00" product-name="conpassione/staff">
+        <header/>
+        <body>
+            <trans-unit id="title" resname="title">
+                <source>Staff</source>
+                <target>Funzionari</target>
+            </trans-unit>
+			<trans-unit id="function.label" resname="function.label">
+				<source>Function</source>
+				<target>Funzione</target>
+			</trans-unit>
+			<trans-unit id="feuser.label" resname="feuser.label">
+				<source>Member</source>
+				<target>Membro</target>
+			</trans-unit>
+			<trans-unit id="responsibility.label" resname="responsibility.label">
+				<source>Responsibility</source>
+				<target>Responsibilità</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

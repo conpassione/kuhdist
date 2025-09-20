@@ -1,0 +1,38 @@
+/* Created by Content Blocks */
+.textimageleft {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: full-width;
+
+  .accent {
+    background-color: var(--clr-background-accent);
+  }
+
+  .brandcolor {
+    background-color: var(--clr-background-brandcolor);
+  }
+
+  .cp-image {
+    grid-column: full-width;
+    margin-block-end: 0;
+  }
+
+  .textimageleft-text {
+    grid-column: content;
+    padding-block-end: var(--gutter);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .textimageleft .cp-image {
+    grid-column: full-width-start / centerline;
+  }
+
+  .textimageleft .textimageleft-text {
+    grid-column: centerline / content-end;
+    align-self: center;
+    padding-left: calc(var(--gutter) * 2);
+  }
+}
+
+

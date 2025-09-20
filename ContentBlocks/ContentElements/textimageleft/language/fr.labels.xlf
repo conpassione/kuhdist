@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="fr" original="Labels.xlf" datatype="plaintext" product-name="conpassione/homepage" date="2025-02-22T16:19:15+01:00">
+		<header></header>
+		<body>
+			<trans-unit id="description">
+				<source>Text with big Image element at left</source>
+				<target>Text avec grande image à gauche</target>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Text with Image L</source>
+				<target>Text et Image G</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

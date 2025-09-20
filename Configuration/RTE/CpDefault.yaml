@@ -1,18 +1,19 @@
 # CKE-Editor CpBase-Configuration
 # Load default processing options
 imports:
-  - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Processing.yaml' }
-  - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Editor/Base.yaml' }
-  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
-  - { resource: 'EXT:kuhdist/Configuration/RTE/Editor/Base.yaml' }
-  - { resource: 'EXT:kuhdist/Configuration/RTE/Editor/Plugins.yaml' }
-  - { resource: 'EXT:kuhdist/Configuration/RTE/Editor/LinkBrowser.yaml' }
-  - { resource: 'EXT:kuhdist/Configuration/RTE/Editor/Styles.yaml' }
-  - { resource: 'EXT:kuhdist/Configuration/RTE/Editor/Languages.yaml' }
-  - { resource: 'EXT:kuhdist/Configuration/RTE/Editor/Processing.yaml' }
+  - {resource: 'EXT:rte-ckeditor/Configuration/RTE/Processing.yaml'}
+  - {resource: 'EXT:rte-ckeditor/Configuration/RTE/Editor/Base.yaml'}
+  - {resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml'}
+  - {resource: 'EXT:kuhdist/Configuration/RTE/Editor/Base.yaml'}
+  - {resource: 'EXT:kuhdist/Configuration/RTE/Editor/Plugins.yaml'}
+  - {resource: 'EXT:kuhdist/Configuration/RTE/Editor/LinkBrowser.yaml'}
+  - {resource: 'EXT:kuhdist/Configuration/RTE/Editor/Styles.yaml'}
+  - {resource: 'EXT:kuhdist/Configuration/RTE/Editor/Languages.yaml'}
+  - {resource: 'EXT:kuhdist/Configuration/RTE/Editor/Processing.yaml'}
 
 # Add configuration for the editor
-# For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
+# For complete documentation
+# see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
 editor:
   config:
     forcePasteAsPlainText: true
@@ -30,12 +31,12 @@ editor:
         - '|'
         - bold
         - italic
-        #- underline
+        # - underline
         - softhyphen
         - '|'
         - bulletedList
         - numberedList
-        #- blockQuote
+        # - blockQuote
         - '|'
         - alignment
         - '|'
@@ -47,12 +48,12 @@ editor:
         - showBlocks
         - '|'
         - sourceEditing
-        #- pasteFromOffice
-        #- textPartLanguage
+        # - pasteFromOffice
+        # - textPartLanguage
 
     alignment:
       options:
-        - { name: 'left', className: 'text-start' }
-        - { name: 'center', className: 'text-center' }
-        - { name: 'right', className: 'text-end' }
-        - { name: 'justify', className: 'text-justify' }
+        - {name: 'left', className: 'text-start'}
+        - {name: 'center', className: 'text-center'}
+        - {name: 'right', className: 'text-end'}
+        - {name: 'justify', className: 'text-justify'}

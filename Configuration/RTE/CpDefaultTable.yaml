@@ -1,21 +1,22 @@
 # CKE-Editor CpBase-Configuration
 # Load default processing options
 imports:
-  - { resource: 'EXT:kuhdist/Configuration/RTE/CpDefault.yaml' }
+  - {resource: 'EXT:kuhdist/Configuration/RTE/CpDefault.yaml'}
 
 
 # Add configuration for the editor
-# For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
+# For complete documentation
+#  see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
 editor:
   config:
     # the CSS file to be used inside the editor
     # contentsCss: 'EXT:kuhdist/Resources/Public/Css/Rte.css'
     toolbar:
       items:
-        - { label: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.toolbar.items.table', withText: true, items: [ 'insertTable', 'tableColumn', 'tableRow', 'mergeTableCells' ] }
+        - {label: 'LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:rte.toolbar.items.table', withText: true, items: ['insertTable', 'tableColumn', 'tableRow', 'mergeTableCells']}
 
     table:
-      defaultHeadings: { rows: 1, columns: 1 }
+      defaultHeadings: {rows: 1, columns: 1}
       contentToolbar:
         - tableColumn
         - tableRow

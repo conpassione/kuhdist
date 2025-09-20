@@ -1,0 +1,49 @@
+styles.content.textmedia.linkWrap.lightboxCssClass = lightbox
+styles.content.textmedia.linkWrap.lightboxRelAttribute = description
+
+plugin.tx_gridgallery {
+  # cat=plugin.tx_gridgallery/appearance/a01; type=int+; label=Default rows height: The default preferred rows height in pixel.
+  defaultRowHeight = 250
+
+  # cat=plugin.tx_gridgallery/appearance/a02; type=float; label=Default render factor: The images will be rendered larger than the row height (defaultRenderFactor * defaultRowHeight)
+  defaultRenderFactor = 4
+
+  # cat=plugin.tx_gridgallery/appearance/a03; type=int+; label=Default margins: Decide the default margins between the images
+  defaultMargins = 2
+
+  # cat=plugin.tx_gridgallery/appearance/a04; type=options[nojustify,justify,hide,center,right]; label=Default last row: Default value to handle the last row in gallery
+  defaultLastRow = nojustify
+
+  # cat=plugin.tx_gridgallery/appearance/a05; type=int; label=Border: Default space around the content element
+  defaultBorder = -1
+
+  # customsubcategory=crop=Crop variations
+
+  # cat=plugin.tx_gridgallery/crop/c01; type=string; label=Thumbnail crop variant: This crop variant is used to generate the thumbnails
+  thumbnailCropVariant = thumbnail
+
+  # cat=plugin.tx_gridgallery/crop/c02; type=string; label=Lightbox crop variant: This crop variant is used to generate the lightbox image
+  lightboxCropVariant = default
+
+  # cat=plugin.tx_gridgallery/enable/e01; type=boolean; label=Default captions: Enable to show captions by default
+  defaultCaptions = 1
+
+  # cat=plugin.tx_gridgallery/enable/e01; type=boolean; label=Default randomize: Enable to randomize the image-order by default
+  defaultRandomize = 0
+
+  # cat=plugin.tx_gridgallery/others/c01; type=string; label=Caption fields: The content of these field(s) will be used to generate the caption (if captions are enabled). Fieldnames separated by commas and ordered by priority (example: "description, title, alternative")
+  captionFields = description
+
+  # customsubcategory=external=External libraries
+
+  # cat=plugin.tx_gridgallery/external/e01; type=boolean; label=Load jQuery: Enable this, if your website does not already use jQuery (loads jquery 3.4.1)
+  enableJquery = 0
+}
+
+styles.content.textmedia {
+  maxW = 1600
+  maxWInText = 622
+  columnSpacing = 0
+  borderWidth = 0
+  borderPadding = 0
+}

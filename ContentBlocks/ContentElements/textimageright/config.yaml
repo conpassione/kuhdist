@@ -1,0 +1,27 @@
+name: conpassione/textimageright
+typeName: cp-textimageright
+group: z-cplayout
+prefixFields: false
+fields:
+  - identifier: conpassione/Header
+    type: Basic
+  - identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+  - identifier: image
+    useExistingField: true
+    extendedPalette: true
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: layoutpalette
+    type: Palette
+    fields:
+      - identifier: sectionlayout
+        type: Select
+        useExistingField: true
+      - identifier: contentlayout
+        type: Select
+        useExistingField: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
