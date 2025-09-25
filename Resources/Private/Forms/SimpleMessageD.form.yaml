@@ -8,23 +8,36 @@ finishers:
   - identifier: EmailToSender
     options:
       subject: 'Bestätigungsmail'
+      title: 'Deine Anfrage'
       recipients:
         '{email}': '{lastname} {firstname}'
-      senderAddress: 'info@conpassione.ch'
-      senderName: 'conPassione gmbh'
+      senderAddress: 'info@kindundhund.ch'
+      senderName: 'Verein KIND&HUND'
       addHtmlPart: true
       attachUploads: false
-      title: 'Deine Anfrage'
+      # templateName: 'sm.html'
+      templateRootPaths:
+        100: 'EXT:kuhdist/Resources/Private/Emails/Templates'
+      layoutRootPaths:
+        100: 'EXT:kuhdist/Resources/Private/Emails/Layouts'
+      partialRootPaths:
+        100: 'EXT:kuhdist/Resources/Private/Emails/Partials'
   - identifier: EmailToReceiver
     options:
       subject: 'Anfrage von {lastname} {firstname}'
+      title: 'Anfrage via Website von {firstname} {lastname}'
       recipients:
-        info@conpassione.ch: 'conPassione gmbh'
+        info@kindundhund.ch: 'Verein KIND&HUND'
       senderAddress: '{email}'
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
-      title: 'Anfrage via Website von {firstname} {lastname}'
+      templateRootPaths:
+        100: 'EXT:kuhdist/Resources/Private/Emails/Templates'
+      layoutRootPaths:
+        100: 'EXT:kuhdist/Resources/Private/Emails/Layouts'
+      partialRootPaths:
+        100: 'EXT:kuhdist/Resources/Private/Emails/Partials'
   - identifier: Confirmation
     options:
       message: 'Besten Dank für Deine Anfrage. Du bekommst innerhalb einer Woche Antwort von uns.'

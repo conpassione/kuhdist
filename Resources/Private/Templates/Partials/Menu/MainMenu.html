@@ -3,23 +3,6 @@
 <f:comment><!--MainMenu für alle Seiten (ohne Bilder)--></f:comment>
 
 <f:if condition="{mainmenu}">
-    <nav class="nav-main" role="menu">
-        <ul class="menu-items">
-            <li class="level-0{f:if(condition: '{page.id} == {homePageUid}', then:' active')}">
-                <f:link.page class="menu-item" pageUid="{homePageUid}">
-                    {homePageTitle}
-                </f:link.page>
-            </li>
-            <f:for as="menuItem" each="{mainmenu}">
-                <li class="{f:if(condition: menuItem.active, then:'active ')}level-1">
-                    <f:link.page class="menu-item" pageUid="{menuItem.data.uid}">
-                        {menuItem.title}
-                    </f:link.page>
-                </li>
-            </f:for>
-        </ul>
-    </nav>
-
     <div class="mobilemenu{f:if(condition: '{languagemenu -> f:count()} < 2', then: ' no-inline-end-margin')}">
         <input aria-haspopup="true" class="hamburger visually-hidden" id="hamburger" role="button" type="checkbox"/>
         <span class="visually-hidden hamburger-expanded">Menu expanded</span>
@@ -40,19 +23,6 @@
             <f:render arguments="{_all}" section="nav-mobile"/>
         </nav>
     </div>
-    <f:if condition="{languagemenu -> f:count()} > 1">
-        <div class="lan-menu">
-            <ul class="language-menu" id="language-menu">
-                <f:for as="item" each="{languagemenu}">
-                    <li class="lmenu{f:if(condition: item.active, then: ' active')} {f:if(condition: item.available, else: ' text-muted')}">
-                        <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
-                            <span><f:format.case>{item.twoLetterIsoCode}</f:format.case></span>
-                        </a>
-                    </li>
-                </f:for>
-            </ul>
-        </div>
-    </f:if>
 </f:if>
 
 <f:section name="nav-mobile">

@@ -1,6 +1,2 @@
 name: conpassione/kuhdist
 label: KIND&HUND-Distribution
-dependencies:
-  - typo3/form
-  - typo3/redirects
-  - typo3/seo-sitemap

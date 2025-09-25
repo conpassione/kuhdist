@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Conpassione\kuhdist\Command;
+namespace Conpassione\Kuhdist\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -16,9 +16,9 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 
 #[AsCommand(
-    name: 'kuh:remove-missingfilerelations',
+    name: 'conpassione:remove-missingfilerelations',
     description: 'Remove missing FAL-file relations',
-    aliases: ['kuh:removemissingfilerelations']
+    aliases: ['conpassione:removemissingfilerelations']
 )]
 class RemoveMissingFileRelationsCommand extends Command
 {

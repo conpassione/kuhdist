@@ -17,7 +17,7 @@ config {
   pageTitle.field = nav_title // title
   pageTitle.postCObject = TEXT
   pageTitle.postCObject {
-    field = subtitle // nav_title // title
+    field = subtitle // seo_title
     noTrimWrap = | : ||
     postCObject = TEXT
     postCObject {
@@ -43,8 +43,6 @@ config {
     10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
     20.header = X-Content-Type-Options: nosniff
     30.header = X-Powered-By: Unicorns
-  #    40.header = Referrer-Policy: same-origin
-  #    60.header = Content-Security-Policy: frame-ancestors 'self'
   }
 }
 
@@ -84,12 +82,7 @@ page {
   includeJSFooter {
     jQueryMPexec = EXT:kuhdist/Resources/Public/JavaScript/magnific-popup-exec.js
     jQueryMPexec.async = 1
-
-    #    event = EXT:kuhdist/Resources/Public/JavaScript/Events.js
-    #    event.async = 1
-    #    event.type = text/javascript
   }
 
   jsFooterInline >
 }
-

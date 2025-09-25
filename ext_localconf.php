@@ -43,15 +43,3 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['it']['EXT:frontend/R
 // Define TypoScript as content rendering template.
 // This is normally set in Fluid Styled Content.
 $GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'][] = 'kuhdist/Configuration/TypoScript/Rendering/';
-
-ExtensionManagementUtility::addTypoScriptSetup(
-    '
-   module.tx_form {
-       settings {
-           yamlConfigurations {
-               36650 = EXT:kuhdist/Configuration/Form/CpFormSetup.yaml
-           }
-       }
-   }
-'
-);

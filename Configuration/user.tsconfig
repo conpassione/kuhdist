@@ -11,10 +11,10 @@ options.pageTree.doktypesToShowInNewPageDragArea := addToList(36650001,36650011,
 // options.pageTree.doktypesToShowInNewPageDragArea:=removeFromList()
 
 // Toolbar
-[! backend.user.isAdmin]
+//[! backend.user.isAdmin]
   options.clearCache.all := getEnv(USR_CLEARCACHE_ALL)
   options.clearCache.pages := getEnv(USR_CLEARCACHE_PAGES)
-[END]
+//[END]
 
 // Clipboard
 options.clipboardNumberPads = 1

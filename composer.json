@@ -66,12 +66,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Conpassione\\kuhdist\\": "Classes"
+			"Conpassione\\Kuhdist\\": "Classes"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Conpassione\\kuhdist\\Tests\\": "Tests"
+			"Conpassione\\Kuhdist\\Tests\\": "Tests"
 		}
 	},
 	"config": {

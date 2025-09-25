@@ -4,7 +4,7 @@ declare(strict_types=1);
 /**
  * Erstellt nach der Idee von https://daniel-siepmann.de/typo3-rte-for-input-fields.html
  */
-namespace Conpassione\kuhdist\EventListener;
+namespace Conpassione\Kuhdist\EventListener;
 
 use TYPO3\CMS\RteCKEditor\Form\Element\Event\AfterPrepareConfigurationForEditorEvent;
 

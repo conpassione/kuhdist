@@ -44,7 +44,6 @@ page.10.dataProcessing {
   }
 }
 
-
 # auslesen der Medien aus dem aktuellen Page-Record
 page.10.dataProcessing {
   20 = files
@@ -127,11 +126,6 @@ page.10 {
     homePageSlug = TEXT
     homePageSlug.data = levelfield : 0, slug
 
-    referer = TEXT
-    referer {
-      data = getIndpEnv : HTTP_REFERER
-    }
-
     layoutName = TEXT
     layoutName {
       cObject = CASE
@@ -142,22 +136,5 @@ page.10 {
         0.value = Default
       }
     }
-
-    #    displaywidth = TEXT
-    #    displaywidth {
-    #      cObject = CASE
-    #      cObject {
-    #        key.field = displaywidth
-    #
-    #        0 = TEXT
-    #        0.value >
-    #
-    #        1 = TEXT
-    #        1.value = breakout
-    #
-    #        2 = TEXT
-    #        2.value = full-width
-    #      }
-    #    }
   }
 }

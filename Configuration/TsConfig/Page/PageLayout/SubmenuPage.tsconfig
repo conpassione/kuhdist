@@ -8,24 +8,9 @@ mod {
           backend_layout {
             doktype = 36650011
             colCount = 1
-            rowCount = 4
+            rowCount = 3
             rows {
               1 {
-                columns {
-                  1 {
-                    name = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.col9
-                    identifier = hero
-                    colPos = 9
-                    allowed {
-                      CType = image
-                    }
-
-                    maxitems = 1
-                  }
-                }
-              }
-
-              2 {
                 columns {
                   1 {
                     name = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.submenu
@@ -33,7 +18,7 @@ mod {
                 }
               }
 
-              3 {
+              2 {
                 columns {
                   1 {
                     name = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.col0
@@ -46,13 +31,14 @@ mod {
                 }
               }
 
-              4 {
+              3 {
                 columns {
                   1 {
                     name = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
                     identifier = footer
                     colPos = 1
                     slideMode = collect
+                    allowed.CType >
                   }
                 }
               }

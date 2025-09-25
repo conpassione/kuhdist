@@ -9,15 +9,15 @@ prototypes:
     formElementsDefinition:
       Form:
         renderingOptions:
-          #          templateRootPaths:
-          #            36650: 'EXT:kuhdist/Resources/Private/Frontend/Templates/'
-          #          partialRootPaths:
-          #            36650: 'EXT:kuhdist/Resources/Private/Frontend/Partials/'
-          #          layoutRootPaths:
-          #            36650: 'EXT:kuhdist/Resources/Private/Frontend/Layouts/'
+#          templateRootPaths:
+#            36650: 'EXT:kuhdist/Resources/Private/Emails/Templates/'
+#          partialRootPaths:
+#            36650: 'EXT:kuhdist/Resources/Private/Emails/Partials/'
+#          layoutRootPaths:
+#            36650: 'EXT:kuhdist/Resources/Private/Emails/Layouts/'
           translation:
             translationFiles:
-              36650: 'EXT:kuhdist/Resources/Private/Language/formelements.xlf'
+              36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
 
     formEditor:
       translationFiles:
@@ -29,10 +29,9 @@ prototypes:
 formManager:
   translationFiles:
     36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
-#  selectablePrototypesConfiguration:
-#    100:
-#      newFormTemplates:
-#        366501:
-#          templatePath: 'EXT:kuhdist/Resources/Private/Forms/SimpleMessageForm.yaml'
-#          label: 'newFormTemplates.SimpleMessageForm.label'
-
+# selectablePrototypesConfiguration:
+#  100:
+#    newFormTemplates:
+#      366501:
+#        templatePath: 'EXT:kuhdist/Resources/Private/Forms/SimpleMessageD.yaml'
+#        label: 'newFormTemplates.SimpleMessageForm.label'

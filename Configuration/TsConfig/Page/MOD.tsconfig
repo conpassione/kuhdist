@@ -51,7 +51,6 @@ mod.wizards.newContentElement.wizardItems {
 #  show:=addToList(kuhdist_testce)
 #}
 
-
 module.tx_form {
   settings {
     yamlConfigurations {

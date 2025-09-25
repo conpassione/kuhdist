@@ -34,7 +34,7 @@ call_user_func(static function (): void {
         'after:default'
     );
 
-    // TCA für header-Field überschreiben, damit der RTE zum Editieren verwendet werden kann
+    // TCA für tt_content.header-Field überschreiben, damit der RTE zum Editieren verwendet werden kann
     // siehe: https://daniel-siepmann.de/typo3-rte-for-input-fields.html
     $GLOBALS['TCA']['tt_content']['columns']['header']['config'] = [
         'type' => 'text',
@@ -42,6 +42,7 @@ call_user_func(static function (): void {
         'enableRichtext' => true,
         'richtextConfiguration' => 'CpMinimal'
     ];
+    // TCA für pages.subtitle-Field überschreiben, damit der RTE zum Editieren verwendet werden kann
     $GLOBALS['TCA']['pages']['columns']['subtitle']['config'] = [
         'type' => 'text',
         'rows' => 1,
@@ -49,7 +50,10 @@ call_user_func(static function (): void {
         'richtextConfiguration' => 'CpMinimal'
     ];
 
-    /* containers */
+    /* containers definition */
+    /* ------------------------------------------------------------------------------------------------------------- */
+
+    /* cp-1col */
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
@@ -81,7 +85,7 @@ call_user_func(static function (): void {
         --palette--;;appearanceLinks,
         ';
 
-    /* containers */
+    /* cp-2cols5050 */
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
@@ -117,6 +121,7 @@ call_user_func(static function (): void {
         --palette--;;appearanceLinks,
         ';
 
+    /* cp-2cols3366 */
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
@@ -153,6 +158,7 @@ call_user_func(static function (): void {
         --palette--;;appearanceLinks,
         ';
 
+    /* cp-2cols6633 */
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
@@ -189,6 +195,7 @@ call_user_func(static function (): void {
         --palette--;;appearanceLinks,
         ';
 
+    /* cp-2cols */
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
@@ -229,6 +236,8 @@ call_user_func(static function (): void {
         --palette--;;appearanceLinks,
         ';
 
+    /* additional fields in tt_content */
+    /* ------------------------------------------------------------------------------------------------------------- */
     $additionalColumns = [
         'sectionlayout' => [
             'exclude' => true,

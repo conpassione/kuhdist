@@ -102,8 +102,10 @@ TCEFORM.tt_content {
   # header_link
   subheader.disabled = 1
 
-  #Erscheinungsbild
-  #layout
+  # Erscheinungsbild
+  # layout
+  # layout field TYPO3 Standard labels removed in TCA/Overrides/tt_content.php
+  # => use addItems only
   layout {
     disabled = 1
     addItems {
@@ -112,6 +114,8 @@ TCEFORM.tt_content {
   }
 
   # Definition der Rahmen und Hintergründe
+  # frame_clasas field TYPO3 Standard labels removed in TCA/Overrides/tt_content.php
+  # => use addItems only
   frame_class {
     disabled = 1
     addItems {
@@ -138,6 +142,8 @@ TCEFORM.tt_content {
 }
 
 TCEFORM.tt_content {
+  # sesctionLayout field added in TCA/Overrides/tt_content.php
+  # => use addItems only
   sectionlayout {
     addItems {
       accent = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.accent
@@ -148,6 +154,11 @@ TCEFORM.tt_content {
       full-width-brandcolor = LLL:EXT:kuhdist/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.full-width-brandcolor
     }
   }
+  # contentLayout field added in TCA/Overrides/tt_content.php
+  # => use addItems only
+#  contentlayout {
+#
+#  }
 }
 
 [! backend.user.isAdmin]
@@ -197,7 +208,8 @@ TCEFORM.tt_content.imagecols {
   removeItems = 5,6,7,8
 }
 
-# fe-users
+# Maske fe-users anpassen, Usability verbessern!
+# insbesondere heute nicht mehr verwendete Felder wie Fax löschen
 TCEFORM.fe_users {
   company.disabled = 1
   title.disabled = 1
