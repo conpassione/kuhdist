@@ -52,15 +52,19 @@
     --clr-text:                     var(--clr-brand--gray-dark);
     --clr-background:               var(--clr-bw-100);
     --clr-logo:                     var(--clr-brand--gray-dark);
+    --clr-h1:                       var(--clr-bw-030);
+    --clr-h:                        var(--clr-brand--primary)
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
       color-scheme: dark;
       /* application colors */
-      --clr-text:                  var(--clr-bw-100);
+      --clr-text:                  var(--clr-bw-090);
       --clr-background:            var(--clr-bw-020);
       --clr-logo:                  var(--clr-bw-100);
+      --clr-h1:                    var(--clr-bw-030);
+      --clr-h:                     var(--clr-brand--primary-dark);
     }
   }
 }

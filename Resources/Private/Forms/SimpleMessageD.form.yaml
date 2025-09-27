@@ -13,15 +13,7 @@ finishers:
         '{email}': '{lastname} {firstname}'
       senderAddress: 'info@kindundhund.ch'
       senderName: 'Verein KIND&HUND'
-      addHtmlPart: true
-      attachUploads: false
       # templateName: 'sm.html'
-      templateRootPaths:
-        100: 'EXT:kuhdist/Resources/Private/Emails/Templates'
-      layoutRootPaths:
-        100: 'EXT:kuhdist/Resources/Private/Emails/Layouts'
-      partialRootPaths:
-        100: 'EXT:kuhdist/Resources/Private/Emails/Partials'
   - identifier: EmailToReceiver
     options:
       subject: 'Anfrage von {lastname} {firstname}'
@@ -30,14 +22,7 @@ finishers:
         info@kindundhund.ch: 'Verein KIND&HUND'
       senderAddress: '{email}'
       senderName: '{lastname} {firstname}'
-      addHtmlPart: true
-      attachUploads: false
-      templateRootPaths:
-        100: 'EXT:kuhdist/Resources/Private/Emails/Templates'
-      layoutRootPaths:
-        100: 'EXT:kuhdist/Resources/Private/Emails/Layouts'
-      partialRootPaths:
-        100: 'EXT:kuhdist/Resources/Private/Emails/Partials'
+      # templateName: 'sm.html'
   - identifier: Confirmation
     options:
       message: 'Besten Dank für Deine Anfrage. Du bekommst innerhalb einer Woche Antwort von uns.'

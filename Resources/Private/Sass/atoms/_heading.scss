@@ -7,8 +7,9 @@
   h1, h2, h3, h4, h5, h6 {
     font-size:   var(--fs-regular);
     line-height: var(--lh-h);
-    font-family: var(--ff-h), sans-serif;
-    font-weight: var(--fw-regular);
+    font-family: var(--ff-h);
+    font-weight: var(--fw-h);
+
     margin:      0;
     hyphens:     auto;
     a {
@@ -23,7 +24,7 @@
 
   .h1-font,
   .h1 {
-    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-size: calc(var(--fs-regular) * 2);
   }
 
   .h1 {
@@ -34,7 +35,8 @@
 
   .h2-font,
   .h2 {
-    font-size: clamp(2rem, 3vw, 3rem);
+    //font-size: clamp(2rem, 3vw, 3rem);
+    font-size: calc(var(--fs-regular) * 2);
   }
 
   .h2 {

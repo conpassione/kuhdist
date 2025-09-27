@@ -1,34 +1,53 @@
 persistenceManager:
   allowedExtensionPaths:
-    100: 'EXT:kuhdist/Resources/Private/Forms/'
+    36650: 'EXT:kuhdist/Resources/Private/Forms/'
   allowSaveToExtensionPaths: false
   allowDeleteFromExtensionPaths: false
 
 prototypes:
   standard:
-    formElementsDefinition:
-      Form:
-        renderingOptions:
+    finishersDefinition:
+      EmailToReceiver:
+        options:
+          templateName: 'Form'
+          templateRootPaths:
+            36650: 'EXT:kuhdist/Resources/Private/Emails/Templates/'
+          layoutRootPaths:
+            36650: 'EXT:kuhdist/Resources/Private/Emails/Layouts/'
+          partialRootPaths:
+            36650: 'EXT:kuhdist/Resources/Private/Emails/Partials/'
+      EmailToSender:
+        options:
+          templateName: 'Form'
+          templateRootPaths:
+            36650: 'EXT:kuhdist/Resources/Private/Emails/Templates/'
+          layoutRootPaths:
+            36650: 'EXT:kuhdist/Resources/Private/Emails/Layouts/'
+          partialRootPaths:
+            36650: 'EXT:kuhdist/Resources/Private/Emails/Partials/'
+#    formElementsDefinition:
+#      Form:
+#        renderingOptions:
 #          templateRootPaths:
 #            36650: 'EXT:kuhdist/Resources/Private/Emails/Templates/'
 #          partialRootPaths:
 #            36650: 'EXT:kuhdist/Resources/Private/Emails/Partials/'
 #          layoutRootPaths:
 #            36650: 'EXT:kuhdist/Resources/Private/Emails/Layouts/'
-          translation:
-            translationFiles:
-              36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
+#          translation:
+#            translationFiles:
+#              36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
 
-    formEditor:
-      translationFiles:
-        36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
-    formEngine:
-      translationFiles:
-        36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
+#    formEditor:
+#      translationFiles:
+#        36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
+#    formEngine:
+#      translationFiles:
+#        36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
 
-formManager:
-  translationFiles:
-    36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
+# formManager:
+#  translationFiles:
+#    36650: 'EXT:kuhdist/Resources/Private/Language/form.xlf'
 # selectablePrototypesConfiguration:
 #  100:
 #    newFormTemplates:

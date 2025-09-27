@@ -8,49 +8,103 @@
     font-style:  normal;
   }
 
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('../Fonts/OpenSans/OpenSans-SemiBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('../Fonts/OpenSans/OpenSans-SemiBoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+
+//  @font-face {
+//    font-family: 'Open Sans';
+//    src: url('../Fonts/OpenSans/OpenSans-Regular.woff2') format('woff2');
+//    font-weight: normal;
+//    font-style: normal;
+//    font-display: swap;
+//  }
+//
+//  @font-face {
+//    font-family: 'Open Sans';
+//    src: url('../Fonts/OpenSans/OpenSans-Italic.woff2') format('woff2');
+//    font-weight: normal;
+//    font-style: italic;
+//    font-display: swap;
+//  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('../Fonts/OpenSans/OpenSans-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('../Fonts/OpenSans/OpenSans-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('../Fonts/OpenSans/OpenSans_Condensed-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('../Fonts/OpenSans/OpenSans_Condensed-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+
   /* =============================== */
   :root {
     /* fontfaces */
-    --ff:              system-ui, sans-serif;
-    --ff-condensed:    system-ui, sans-serif;
+    --ff:              'Open Sans', system-ui, sans-serif;
+    --ff-condensed:    'Open Sans', system-ui, sans-serif;
     --ff-serif:        Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    --ff-h:            system-ui, sans-serif;
-    --ff-nav:          system-ui, sans-serif;
-    --ff-mono:         'Nimbus Mono PS', 'Courier New', monospace;
-    --ff-symbol:       'Symbols';
+    --ff-h:            'Open Sans', system-ui, sans-serif;
+    --ff-nav:          'Open Sans', system-ui, sans-serif;
+    --ff-mono:         ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    --ff-symbol:       Symbols;
 
     /* font weight */
     --fw-regular:      300;
     --fw-mono:         400;
     --fw-bold:         700;
+    --fw-h:            600;
 
     /* font size */
     --fs-fix--small:  16px;
-    --fs-fix--normal: 18px;
+    --fs-fix--normal: 50px;
     --fs-fix--big:    24px;
 
     /* line height */
-    --lh-regular:      1.5;
-    --lh-small:        1.2;
-
-    --lh-h:            var(--lh-small);
+    --lh-fix--regular:      1.5;
+    --lh-fix--small:        1.2;
+    --lh-fix--h:            var(--lh-fix--small);
 
     /* regular font */
-    --fs-regular:      clamp(var(--fs-fix--normal), (100vw - 960px) / 100 + var(--fs-fix--normal), var(--fs-fix--big));
-    --fs-big:          calc(var(--fs-regular) * 1.125);
-    --fs-small:        calc(var(--fs-regular) * 0.875);
+    --fs-regular:      clamp(1rem, 3.75vw , 2.5rem);
+    font-size:         var(--fs-fix--nomral);
+    line-height:       var(--lh-fix--regular);
 
-    font-size:         var(--fs-regular);
-    line-height:       var(--lh-regular);
 
-  }
-
-  .fs-big {
-    font-size: var(--fs-big);
-    line-height: 1.8;
-  }
-  .fs-small {
-    font-size: var(--fs-small);
   }
 
   .iconfont {
