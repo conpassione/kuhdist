@@ -1,10 +1,6 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="footer--content">
-    <div class="logo logo-pink">
-        <f:render partial="header/svglogo"/>
-    </div>
-
     <f:for each="{records}" as="record">
         <f:cObject
             typoscriptObjectPath="tt_content.{record.CType}"

@@ -17,10 +17,6 @@
     --clr-bw-095:                  oklch(0.95 0 0);
     --clr-bw-100:                  oklch(1 0 0);
 
-    --clr-success:                 oklch(0.5 0.12 150);
-    --clr-info:                    oklch(0.5 0.12 220);
-    --clr-error:                   oklch(0.5 0.12 0);
-
     --clr-brand--primary:          oklch(0.6 0.1906 139.38);
     --clr-brand--primary-dark:     oklch(0.5 0.1906 139.38);
     --clr-brand--primary-light:    oklch(0.7 0.1906 139.38);
@@ -34,37 +30,47 @@
     --clr-brand--tertiary-light:   oklch(0.7 0.1906 330.62);
     --clr-brand--tertiary-dimmed:  oklch(0.8 0.1906 330.62);
     --clr-brand--gray:             var(--clr-bw-060);
-    --clr-brand--gray-dark:        var(--clr-bw-050);
+    --clr-brand--gray-dark:        var(--clr-bw-040);
     --clr-brand--gray-light:       var(--clr-bw-070);
     --clr-brand--gray-dimmed:      var(--clr-bw-080);
+    --clr-brand--white:            var(--clr-bw-100);
+
+    /* system colors */
+    --clr-success:                 oklch(0.5 0.12 150);
+    --clr-info:                    oklch(0.5 0.12 220);
+    --clr-error:                   oklch(0.5 0.12 0);
 
     /* rte */
     --clr-ckeditor--text:          var(--clr-bw-020);
     --clr-ckeditor--bg:            var(--clr-bw-100);
-    --clr-ckeditor--endline:       var(--clr-error);
+    --clr-ckeditor--endline:       var(--clr-brand--secondary-dark);
+
 
     /* ============================ */
     /* Color Theme light            */
     /* ============================ */
-
     color-scheme: light;
     /* application colors */
-    --clr-text:                     var(--clr-brand--gray-dark);
+    --clr-text:                     var(--clr-bw-040);
     --clr-background:               var(--clr-bw-100);
-    --clr-logo:                     var(--clr-brand--gray-dark);
-    --clr-h1:                       var(--clr-bw-030);
-    --clr-h:                        var(--clr-brand--primary)
+    --clr-h1:                       var(--clr-brand--secondary);
+    --clr-h:                        var(--clr-brand--primary);
+    --shadow--green:                0px 7px 7px 0px oklch(from var(--clr-brand--gray) l c h / 50%);
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
+
+      /* ============================ */
+      /* Color Theme dark             */
+      /* ============================ */
       color-scheme: dark;
       /* application colors */
       --clr-text:                  var(--clr-bw-090);
       --clr-background:            var(--clr-bw-020);
-      --clr-logo:                  var(--clr-bw-100);
-      --clr-h1:                    var(--clr-bw-030);
+      --clr-h1:                    var(--clr-brand--secondary-dark);
       --clr-h:                     var(--clr-brand--primary-dark);
+      --shadow--green:                0px 7px 20px 0px oklch(from var(--clr-brand--primary-dark) l c h / 50%);
     }
   }
 }

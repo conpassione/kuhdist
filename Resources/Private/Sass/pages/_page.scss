@@ -4,12 +4,21 @@
 @layer basestyles {
 
   body {
+    --_clr-headerbg: var(--clr-bw-095);
+    --_clr-border: var(--clr-brand--gray-light);
+
     /* overflow-y:     scroll; */
     container-type: inline-size;
     display: grid;
     grid-template-rows: 1fr auto;
   }
 
+  @media (prefers-color-scheme: dark) {
+    body {
+      --_clr-headerbg: var(--clr-bw-030);
+      --_clr-border: var(--clr-brand--primary-light);
+    }
+  }
 
 /*   @media (prefers-reduced-motion: no-preference) {
     :has(:target) {
@@ -22,7 +31,9 @@
     position: fixed;
     -webkit-transform: translateZ(0);
     width: 100vw;
-    background-color: var(--clr-headerbg);
+    background-color: var(--_clr-headerbg);
+    box-shadow: var(--shadow--green);
+    border-block-end: 1px solid var(--_clr-border);
     z-index: 10;
   }
 

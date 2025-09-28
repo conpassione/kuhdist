@@ -3,6 +3,41 @@
 
 @layer basestyles {
 
+  .logo-graygreen {
+    --_clr-logo:       var(--clr-brand--gray-dark);
+    --_clr-logokreis:  var(--clr-brand--gray-dark);
+    --_clr-logopfote:  var(--clr-brand--white);
+    --_clr-logopfote2: var(--clr-brand--primary);
+    --_clr-logohand:   var(--clr-brand--white);
+    --_clr-logohand2:  var(--clr-brand--primary);
+    --_clr-logoslogan: var(--clr-brand--gray-dark);
+  }
+
+  .logo-mono {
+    --_clr-logo:       var(--clr-brand--gray-dark);
+    --_clr-logokreis:  var(--clr-brand--gray-dark);
+    --_clr-logopfote:  var(--clr-brand--gray-dark);
+    --_clr-logopfote2: transparent;
+    --_clr-logohand:   var(--clr-brand--gray-dark);
+    --_clr-logohand2:  transparent;
+    --_clr-logoslogan: var(--clr-brand--gray-dark);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .logo-graygreen {
+      --_clr-logo:       var(--clr-brand--white);
+      --_clr-logoslogan: var(--clr-brand--white);
+    }
+
+    .logo-mono {
+      --_clr-logo: var(--clr-brand--white);
+      --_clr-logokreis: var(--clr-brand--white);
+      --_clr-logopfote: var(--clr-brand--white);
+      --_clr-logohand: var(--clr-brand--white);
+      --_clr-logoslogan: var(--clr-brand--white);
+    }
+  }
+
   .headercontent {
     display: grid;
     grid-auto-flow: column;
@@ -20,26 +55,6 @@
     }
   }
 
-  .logo-graygreen {
-    --_clr-logo: var(--clr-logo);
-    --_clr-logokreis: var(--clr-brand--gray-dark);
-    --_clr-logopfote: #fff;
-    --_clr-logopfote2: var(--clr-brand--primary);
-    --_clr-logohand: #fff;
-    --_clr-logohand2: var(--clr-brand--primary);
-    --_clr-logoslogan: var(--clr-logo);
-  }
-
-  .logo-pink {
-    --_clr-logo: var(--clr-brand--secondary-dark);
-    --_clr-logokreis: var(--clr-brand--secondary-light);
-    --_clr-logopfote: var(--clr-brand--tertiary-dark);
-    --_clr-logopfote2: var(--clr-brand--tertiary-light);
-    --_clr-logohand: var(--clr-brand--tertiary-dark);
-    --_clr-logohand2: var(--clr-brand--tertiary-light);
-    --_clr-logoslogan: var(--clr-brand--secondary);
-  }
-
   .logo a:focus-visible {
     @include outline;
   }
@@ -48,5 +63,4 @@
     width: 100%;
     height: auto;
   }
-
 }

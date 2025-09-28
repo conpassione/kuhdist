@@ -3,8 +3,8 @@
 @layer basestyles {
 
   form {
-    --_clr-border: oklch(from var(--clr-background) calc(l * .9) c h);
-    border:        1px solid var(--clr-accent);
+    --_clr-border: var(--clr-brand--tertiary);
+    border:        1px solid var(--_clr-border);
     border-radius: var(--border-radius);
     padding:       var(--gutter);
   }

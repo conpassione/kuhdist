@@ -24,22 +24,6 @@
     font-display: swap;
   }
 
-//  @font-face {
-//    font-family: 'Open Sans';
-//    src: url('../Fonts/OpenSans/OpenSans-Regular.woff2') format('woff2');
-//    font-weight: normal;
-//    font-style: normal;
-//    font-display: swap;
-//  }
-//
-//  @font-face {
-//    font-family: 'Open Sans';
-//    src: url('../Fonts/OpenSans/OpenSans-Italic.woff2') format('woff2');
-//    font-weight: normal;
-//    font-style: italic;
-//    font-display: swap;
-//  }
-
   @font-face {
     font-family: 'Open Sans';
     src: url('../Fonts/OpenSans/OpenSans-Light.woff2') format('woff2');
@@ -89,20 +73,14 @@
     --fw-bold:         700;
     --fw-h:            600;
 
-    /* font size */
-    --fs-fix--small:  16px;
-    --fs-fix--normal: 50px;
-    --fs-fix--big:    24px;
-
     /* line height */
     --lh-fix--regular:      1.5;
-    --lh-fix--small:        1.2;
-    --lh-fix--h:            var(--lh-fix--small);
+    --lh-fix--h:            1.2;
 
     /* regular font */
-    --fs-regular:      clamp(1rem, 3.75vw , 2.5rem);
-    font-size:         var(--fs-fix--nomral);
+    font-size:         18px;
     line-height:       var(--lh-fix--regular);
+    --fs-regular:      clamp(1rem, 3.75vw , 2rem);
 
 
   }

@@ -4,6 +4,7 @@
 <f:layout name="Layout-{page.pagerecord.layout}"/>
 
 <f:section name="Main">
+    <h1 class="h1">Test: {page.pagerecord.nav_title}</h1>
     <f:for as="record" each="{pagecontent.content.records}">
         <f:cObject
             data="{record.rawRecord}"
