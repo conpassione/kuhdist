@@ -3,7 +3,7 @@
 @layer basestyles {
 
   form {
-    --_clr-border: var(--clr-brand--tertiary);
+    --_clr-border: var(--clr-brand--gray-light);
     border:        1px solid var(--_clr-border);
     border-radius: var(--border-radius);
     padding:       var(--gutter);

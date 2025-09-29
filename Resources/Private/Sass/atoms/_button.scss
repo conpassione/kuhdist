@@ -5,18 +5,20 @@
 @layer basestyles {
 
   button[type=submit],
-  .button {
+  input[type=submit],
+  .button,
+  .btn-primary {
+
     /* default colors for primary button */
-    --_clr-btn:          var(--clr-btn, var(--clr-primarybtn--active));
-    --_clr-btnbg:        var(--clr-btnbg, var(--clr-primarybtnbg--active));
-    --_clr-btn--hover:   var(--clr-btn--hover, var(--clr-primarybtn--hover));
-    --_clr-btnbg--hover: var(--clr-btnbg--hover, var(--clr-primarybtnbg--hover));
-    --_btn-font-size:    inherit;
+    --_clr-btn:          var(--clr-brand--white);
+    --_clr-btnbg:        var(--clr-brand--primary-dark);
+    --_clr-btn--hover:   var(--clr-brand--gray);
+    --_clr-btnbg--hover: var(--clr-brand--primary-dimmed);
 
     color:               var(--_clr-btn);
     background-color:    var(--_clr-btnbg);
-    border-radius:       var(--btn-border-radius), 0;
-    font-size:           var(--_btn-font-size);
+    border-radius:       var(--border-radius, 0);
+    font-size:           inherit;
     display:             inline-block;
     margin-inline-end:   0.25rem;
     padding:             0.5em 1em;
@@ -26,6 +28,11 @@
       color:            var(--_clr-btn--hover);
       background-color: var(--_clr-btnbg--hover);
     }
+  }
+
+  input[type=submit] {
+    margin-block-start: var(--gutter);
+    width: fit-content;
   }
 
   button,
@@ -40,10 +47,10 @@
   }
 
   .button-secondary {
-    --_clr-btn:          var(---clr-secondarybtn--active);
-    --_clr-btnbg:        var(--clr-secondarybtnbg--active);
-    --_clr-btn--hover:   var(--clr-secondarybtn--hover);
-    --_clr-btnbg--hover: var(--clr-secondarybtnbg--hover);
+    --_clr-btn:          var(--clr-brand--wite);
+    --_clr-btnbg:        var(--clr-brand--secondary-dark);
+    --_clr-btn--hover:   var(--clr-brand--gray);
+    --_clr-btnbg--hover: var(--clr-brand--secondary-dimmed);
   }
 
 }

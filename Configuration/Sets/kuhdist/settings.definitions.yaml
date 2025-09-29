@@ -33,10 +33,10 @@ settings:
     description: 'Path to layout root'
     type: string
     default: 'EXT:blog_example/Resources/Private/Layouts/'
-  KuHdist.storagePid:
-    label: 'Default storage PID'
+  KuHdist.loginPid:
+    label: 'Default FE-User Login PID'
     category: KuHdist.pages
-    description: 'Folder that stores all blogs, blog-posts and comments'
+    description: 'Page containing fe_login Form'
     type: int
     default: 0
   KuHdist.editorUsergroupUid:

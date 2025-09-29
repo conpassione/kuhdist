@@ -2,6 +2,11 @@
 
 @layer basestyles {
 
+  form {
+    --_clr-input:     var(--clr-text);
+    --_clr-inputbg:   var(--clr-bw-095  );
+  }
+
   .form-label {
     // color: rebeccapurple;
   }
@@ -12,8 +17,8 @@
 
   .form-control {
     padding:          0.25em;
-    color:            var(--clr-input);
-    background-color: var(--clr-input--bg);
+    color:            var(--_clr-input);
+    background-color: var(--_clr-inputbg);
   }
 
   .error {
@@ -23,9 +28,11 @@
   input, textarea, select {
     width:  100%;
     border: none;
+    color:            var(--_clr-input);
+    background-color: var(--_clr-inputbg);
 
     &:focus-visible {
-      outline: 1px solid var(--clr-brand--primary);
+      outline: 2px solid var(--clr-brand--primary);
     }
   }
 
@@ -35,7 +42,7 @@
       margin-inline-end: 0.25em;
       height:            0.9em;
       width:             1em;
-      accent-color: var(--clr-primarybtnbg--active);
+      accent-color: var(--clr-brand--primary);
     }
   }
 
@@ -46,10 +53,12 @@
 
   input:not(:placeholder-shown):valid {
     outline-color: var(--clr-success);
+    outline-width: 2px;
   }
 
   input:not(:placeholder-shown):invalid {
     outline-color: var(--clr-error);
+    outline-width: 2px;
   }
 
   .form-group:has(input[readonly=readonly]) {
@@ -69,5 +78,8 @@
     }
   }
 
+  legend {
+    font-weight: var(--fw-bold);
+  }
 
 }

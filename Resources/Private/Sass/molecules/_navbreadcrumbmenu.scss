@@ -5,7 +5,11 @@
 
   .breadcrumbmenu {
     /* local settings */
-
+    font-size: calc(var(--fs-regular) * 0.5);
+    >h1 {
+      display:inline-block;
+      font-size: calc(var(--fs-regular) * 0.5);
+    }
     a {
       text-decoration: none;
     }

@@ -3,10 +3,11 @@
 @layer basestyles {
 
   p {
-    max-width: 900ch;
+    max-width: 75ch;
     text-wrap: pretty;
     orphans:   inherit;
     /* hyphens: auto;*/
+    margin-block-end: calc(var(--lh-fix--regular) * var(--fs-regular));
   }
 
   .cp-text:not(:last-child) {

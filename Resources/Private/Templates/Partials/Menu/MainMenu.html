@@ -3,7 +3,12 @@
 <f:comment><!--MainMenu für alle Seiten (ohne Bilder)--></f:comment>
 
 <f:if condition="{mainmenu}">
-    <div class="mobilemenu{f:if(condition: '{languagemenu -> f:count()} < 2', then: ' no-inline-end-margin')}">
+    <nav class="profile profile-graygreen" role="menu">
+        <f:link.page pageUid="{settings.KuHdist.loginPid}" class="homelink" additionalAttributes="{role: 'link'}" title="Profil">
+            <f:render partial="header/Profile"/>
+        </f:link.page>
+    </nav>
+    <div class="mobilemenu no-inline-end-margin">
         <input aria-haspopup="true" class="hamburger visually-hidden" id="hamburger" role="button" type="checkbox"/>
         <span class="visually-hidden hamburger-expanded">Menu expanded</span>
         <span class="visually-hidden hamburger-collapsed">Menu collapsed</span>

@@ -23,6 +23,18 @@
     --_clr-logoslogan: var(--clr-brand--gray-dark);
   }
 
+  .profile-graygreen {
+    --_clr-profilekreis: var(--clr-brand--gray-dark);
+    --_clr-profile2: var(--clr-brand--primary);
+    --_clr-profilebody: var(--clr-brand--white);
+  }
+
+  .profile-mono {
+    --_clr-profilekreis: var(--clr-brand--gray-dark);
+    --_clr-profile2: transparentize();
+    --_clr-profilebody: var(--clr-brand--gray-dark);
+  }
+
   @media (prefers-color-scheme: dark) {
     .logo-graygreen {
       --_clr-logo:       var(--clr-brand--white);
@@ -36,20 +48,36 @@
       --_clr-logohand: var(--clr-brand--white);
       --_clr-logoslogan: var(--clr-brand--white);
     }
+
+    .profile-graygreen {
+    }
+
+    .profile-mono {
+      --_clr-profilekreis: var(--clr-brand--white);
+      --_clr-profile2: transparentize();
+      --_clr-profilebody: var(--clr-brand--white);
+    }
   }
 
   .headercontent {
     display: grid;
     grid-auto-flow: column;
+    grid-template-columns: 1fr 60px 60px;
     justify-content: space-between;
     align-items: center;
     container-type: inline-size;
     container-name: headercontent;
     position: relative;
+    padding-block: 10px;
+  }
+
+  .profile {
+    max-width: 40px;
   }
 
   .logo {
     width: 100%;
+    max-width: 300px;
     a {
       z-index: 2;
     }
