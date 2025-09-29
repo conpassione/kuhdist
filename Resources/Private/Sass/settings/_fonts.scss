@@ -81,6 +81,8 @@
     font-size:         18px;
     line-height:       var(--lh-fix--regular);
     --fs-regular:      clamp(1rem, 3.75vw , 2rem);
+    --fs-big:          calc(var(--fs-regular) * 1.25 );
+    --fs-small:        calc(var(--fs-regular) * 0.875 );
 
 
   }
@@ -92,4 +94,13 @@
     padding-inline-start:  0.1em;
     padding-inline-end:    0.2em;
   }
+
+  .fs-big {
+    font-size: var(--fs-big);
+  }
+
+  .fs-small {
+    font-size: var(--fs-small);
+  }
+
 }

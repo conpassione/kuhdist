@@ -55,11 +55,18 @@
     --clr-background:               var(--clr-bw-100);
     --clr-h1:                       var(--clr-brand--secondary);
     --clr-h:                        var(--clr-brand--primary);
+    --clr-accent:                   var(--clr-brand--primary);
     --shadow--green:                0px 7px 7px 0px oklch(from var(--clr-brand--gray) l c h / 50%);
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
+
+      /* rte */
+      --clr-ckeditor--text:          var(--clr-bw-100);
+      --clr-ckeditor--bg:            var(--clr-bw-020);
+      --clr-ckeditor--endline:       var(--clr-brand--secondary-dark);
+
 
       /* ============================ */
       /* Color Theme dark             */
@@ -70,7 +77,14 @@
       --clr-background:            var(--clr-bw-020);
       --clr-h1:                    var(--clr-brand--secondary-dark);
       --clr-h:                     var(--clr-brand--primary-dark);
-      --shadow--green:                0px 7px 20px 0px oklch(from var(--clr-brand--primary-dark) l c h / 50%);
+      --clr-accent:                var(--clr-brand--primary-dark);
+      --shadow--green:             0px 7px 20px 0px oklch(from var(--clr-brand--primary-dark) l c h / 50%);
+
     }
   }
+
+  .cp-accent {
+    color: var(--clr-accent);
+  }
+
 }
