@@ -9,7 +9,7 @@ prototypes:
     finishersDefinition:
       EmailToReceiver:
         options:
-          templateName: 'Form'
+          templateName: 'ReceiverForm'
           templateRootPaths:
             36650: 'EXT:kuhdist/Resources/Private/Emails/Templates/'
           layoutRootPaths:
@@ -18,7 +18,7 @@ prototypes:
             36650: 'EXT:kuhdist/Resources/Private/Emails/Partials/'
       EmailToSender:
         options:
-          templateName: 'Form'
+          templateName: 'SenderForm'
           templateRootPaths:
             36650: 'EXT:kuhdist/Resources/Private/Emails/Templates/'
           layoutRootPaths:

@@ -7,6 +7,12 @@
     --_clr-inputbg:   var(--clr-bw-095  );
   }
 
+  @media (prefers-color-scheme: dark) {
+    form {
+      --_clr-inputbg:     var(--clr-bw-050);
+    }
+  }
+
   .form-label {
     // color: rebeccapurple;
   }

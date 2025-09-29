@@ -44,6 +44,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['it']['EXT:frontend/R
 // This is normally set in Fluid Styled Content.
 $GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'][] = 'kuhdist/Configuration/TypoScript/Rendering/';
 
-$GLOBALS['TYPO3_CONF_VARS']['MAIL']['layoutRootPaths'][36650] = 'EXT:kuhdist/Resources/Private/Emails/Layouts';
-$GLOBALS['TYPO3_CONF_VARS']['MAIL']['templateRootPaths'][36650] = 'EXT:kuhdist/Resources/Private/Emails/Templates';
-$GLOBALS['TYPO3_CONF_VARS']['MAIL']['partialRootPaths'][36650] = 'EXT:kuhdist/Resources/Private/Emails/Partials';
+//$GLOBALS['TYPO3_CONF_VARS']['MAIL']['layoutRootPaths'][36651] = 'EXT:kuhdist/Resources/Private/Emails/Layouts/';
+//$GLOBALS['TYPO3_CONF_VARS']['MAIL']['templateRootPaths'][36651] = 'EXT:kuhdist/Resources/Private/Emails/Templates/';
+//$GLOBALS['TYPO3_CONF_VARS']['MAIL']['partialRootPaths'][36651] = 'EXT:kuhdist/Resources/Private/Emails/Partials/';
