@@ -5,3 +5,11 @@ plugin.tx_form {
     }
   }
 }
+
+module.tx_form {
+  settings {
+    yamlConfigurations {
+      36650 = EXT:kuhdist/Configuration/Form/CpFormSetup.yaml
+    }
+  }
+}

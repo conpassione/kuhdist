@@ -51,10 +51,10 @@ mod.wizards.newContentElement.wizardItems {
 #  show:=addToList(kuhdist_testce)
 #}
 
-module.tx_form {
-  settings {
-    yamlConfigurations {
-      36650 = EXT:kuhdist/Configuration/Form/CpFormSetup.yaml
-    }
-  }
-}
+#module.tx_form {
+#  settings {
+#    yamlConfigurations {
+#      36650 = EXT:kuhdist/Configuration/Form/CpFormSetup.yaml
+#    }
+#  }
+#}
