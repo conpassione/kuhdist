@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" original="Labels.xlf" datatype="plaintext" product-name="conpassione/stafflist" date="2025-06-18T17:54:11+02:00">
+		<header></header>
+		<body>
+			<trans-unit id="be.description">
+				<source>Displays Staffmembers of pages:</source>
+				<target>Zeigt die Funktionäre der folgenden Seiten:</target>
+			</trans-unit>
+			<trans-unit id="cp_hideaddress.label">
+				<source>hide Address</source>
+				<target>Adresse verbergen</target>
+			</trans-unit>
+			<trans-unit id="cp_hideemail.label">
+				<source>hide email</source>
+				<target>E-Mail verbergen</target>
+			</trans-unit>
+			<trans-unit id="cp_hidefon.label">
+				<source>hide Fon</source>
+				<target>Telefon verbergen</target>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>List of Board-members (Staff)</source>
+				<target>Liste von Funktionäre einer bestimmten Organisationseinheit</target>
+			</trans-unit>
+			<trans-unit id="header.label">
+				<source>Board</source>
+				<target>Organisationseinheit</target>
+			</trans-unit>
+			<trans-unit id="members.label">
+				<source>Page with Staff members</source>
+				<target>Seite mit den Funktionären</target>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Stafflist</source>
+				<target>Funktionärsliste</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

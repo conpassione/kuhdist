@@ -1,0 +1,26 @@
+# CType: stafflist
+# tt_content.stafflist < lib.contentElement ### don't do this for Content Blocks
+tt_content.stafflist {
+  dataProcessing {
+    200 = database-query
+    200 {
+      table = tx_conpassione_staff
+      orderBy = sorting
+      pidInList.data = field : members
+      as = staffmembers
+      dataProcessing {
+        10 = database-query
+        10 {
+          table = fe_users
+          pidInList = 0
+          uidInList.data = field : feuser
+          as = feusers
+          dataProcessing {
+            10 = files
+            10.references.fieldName = image
+          }
+        }
+      }
+    }
+  }
+}

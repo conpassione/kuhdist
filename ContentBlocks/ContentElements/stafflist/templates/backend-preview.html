@@ -1,0 +1,14 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:asset.css href="{cb:assetPath()}/backend-preview.css" identifier="cpmember-backend-preview"/>
+
+<f:if condition="{data.members}">
+    <p>
+        <f:translate key="{cb:languagePath()}:be.description"/>
+    </p>
+    <ul>
+        <li>[{data.members.uid}]&nbsp;{data.members.title}</li>
+    </ul>
+</f:if>

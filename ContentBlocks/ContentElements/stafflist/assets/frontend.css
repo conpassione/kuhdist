@@ -1,0 +1,84 @@
+/* Created by Content Blocks */
+
+/* Stafflist Content Block */
+
+
+.staffcards {
+  --_card--gutter: var(--gutter);
+
+  display: grid;
+  gap: var(--_card--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+}
+
+.staffcard {
+  --_staffcard--color: var(--clr-text);
+  --_staffcard--bg: transparent;
+  --_staffcard--title: var(--clr-bw-090);
+  --_staffcard--titlebg: var(--clr-brand--primary);
+  --_staffcard--border-radius: var(--border-radius);
+
+  border: 1px solid var(--_staffcard--titlebg);
+  border-radius: var(--_staffcard--border-radius);
+  overflow: hidden;
+
+  container: staffcard / inline-size;
+
+  .staffcard--content {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'card-title'
+      'card-image'
+      'card-address'
+      'card-responsibility';
+
+    @container staffcard (width > 480px) {
+      grid-template-columns: minmax(100px, 240px) 1fr;
+      grid-template-areas:
+      'card-title card-title'
+      'card-image card-address'
+      'card-responsibility card-responsibility';
+    }
+
+    .staffcard--title {
+      color: var(--_staffcard--title);
+      background-color: var(--_staffcard--titlebg);
+      margin-block: 0;
+      padding: 0.5rem;
+      grid-column: card-title;
+    }
+
+    .staffcard--image {
+      figcaption {
+        display: none;
+      }
+
+      grid-column: card-image;
+    }
+
+    .staffcard--address {
+      padding: 0.5rem;
+      grid-column: card-address;
+
+      > p {
+        &:last-child {
+          padding-block-end: 0;
+        }
+      }
+    }
+
+    .staffcard--responsibility {
+      padding: 0.5rem;
+      grid-column: card-responsibility;
+    }
+  }
+}
+
+
+
+
+
+

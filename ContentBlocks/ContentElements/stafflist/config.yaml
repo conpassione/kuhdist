@@ -1,0 +1,33 @@
+name: conpassione/stafflist
+typeName: stafflist
+group: z-cpextensions
+prefixFields: false
+fields:
+  - identifier: conpassione/Header
+    type: Basic
+  - identifier: members
+    type: Select
+    renderType: selectSingle
+    minitems: 0
+    maxitems: 1
+    foreign_table: pages
+    #foreign_table_where: 'AND pages.module="staff" AND ({#pages}.{#sys_language_uid} = ###REC_FIELD_sys_language_uid###) ORDER BY pages.title'
+    foreign_table_where: 'AND pages.module="staff" AND ({#pages}.{#sys_language_uid} = 0) ORDER BY pages.title'
+  - identifier: cp_hideaddress
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'hide Address'
+    default: 0
+  - identifier: cp_hidefon
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'hide Fon'
+    default: 0
+  - identifier: cp_hideemail
+    type: Checkbox
+    renderType: checkboxToggle
+    label: 'hide eMail'
+    default: 0
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links

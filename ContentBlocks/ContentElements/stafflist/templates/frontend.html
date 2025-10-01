@@ -1,0 +1,59 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:asset.css href="{cb:assetPath()}/frontend.css" identifier="stafflist-css"/>
+
+<div class="stafflist" id="sl{data.uid}">
+    <f:cObject
+        data="{data}"
+        table="tt_content"
+        typoscriptObjectPath="tt_content.header"
+    />
+    <div class="staffcards">
+        <f:for as="member" each="{staffmembers}">
+            <div aria-label="Member" class="staffcard">
+                <div class="staffcard--content">
+                    <h3 class="h4 staffcard--title">{member.data.function}</h3>
+                    <div class="staffcard--image">
+                        <f:if condition="{member.feusers.0.files}">
+                            <f:then>
+                                <f:cObject
+                                    data="{header: '', showcaption:'0', files: member.feusers.0.files}"
+                                    table="tt_content"
+                                    typoscriptObjectPath="tt_content.image"
+                                />
+                            </f:then>
+                            <f:else>
+                                <p>&nbsp;</p>
+                            </f:else>
+                        </f:if>
+                    </div>
+                    <div class="staffcard--address">
+                        <p><strong>
+                            <f:format.html>{member.feusers.0.data.last_name} {member.feusers.0.data.first_name}</f:format.html>
+                        </strong>
+                            <br>
+                            <f:if condition="{member.feusers.0.data.zip} && ({data.cp_hideaddress} == 0)">
+                                <f:format.html>{member.feusers.0.data.address -> f:format.nl2br()}</f:format.html>
+                                <br>
+                                <f:format.html>{member.feusers.0.data.zip} {member.feusers.0.data.city}</f:format.html>
+                                <br>
+                            </f:if>
+                            <f:if condition="{member.feusers.0.data.mobile} && ({data.cp_hidefon} == 0)">
+                                <f:link.external class="phone-link--icon" uri="tel:{member.feusers.0.data.mobile}">{member.feusers.0.data.mobile}</f:link.external>
+                                <br>
+                            </f:if>
+                            <f:if condition="{member.feusers.0.data.email2} && ({data.cp_hideemail} == 0)">
+                                <f:link.email class="mail-link--icon" email="{member.feusers.0.data.email2}">{member.feusers.0.data.email2}</f:link.email>
+                            </f:if>
+                        </p>
+                    </div>
+                    <div class="staffcard--responsibility">
+                        <f:format.html>{member.data.responsibility}</f:format.html>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>
