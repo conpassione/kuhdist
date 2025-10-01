@@ -214,4 +214,20 @@
       @include outline;
     }
   }
+
+  .skip-nav-link {
+    color: var(--clr-brand--white);
+    background: var(--clr-brand--secondary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0 0.25rem 0.25rem;
+    position: absolute;
+    left: 0.5rem;
+    transform: translateY(-120%);
+    transition: transform 325ms ease-in-out;
+    z-index: 100;
+  }
+
+  .skip-nav-link:focus {
+    transform: translateY(0);
+  }
 }

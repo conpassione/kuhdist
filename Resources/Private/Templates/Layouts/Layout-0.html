@@ -2,10 +2,11 @@
 
 <f:spaceless>
     <header class="content-grid">
+        <a href="#main-content" class="skip-nav-link"><f:translate key="LLL:EXT:kuhdist/Resources/Private/Language/locallang.xlf:skipnavlink"/></a>
         <f:render arguments="{_all}" partial="Header"/>
     </header>
 
-    <main class="content-grid">
+    <main id="main-content" class="content-grid">
         <f:render partial="Menu/BreadcrumbMenu" arguments="{_all}"></f:render>
         <!--TYPO3SEARCH_begin-->
         <f:render section="Main"/>

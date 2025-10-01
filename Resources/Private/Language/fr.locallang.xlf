@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2024-12-02T21:43:40+01:00">
+    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2025-10-01T14:50:36+02:00">
         <body>
-            <trans-unit id="generator" resname="generator">
+            <trans-unit id="generator">
                 <source>The &#34;Generator&#34; Meta Tag.</source>
                 <target>Meta-Tag</target>
             </trans-unit>
-            <trans-unit id="headerComment" resname="headerComment">
+            <trans-unit id="headerComment">
                 <source>The default Header Comment.</source>
                 <target>Titre</target>
             </trans-unit>
-            <trans-unit id="submenu.navitem.linktitle" resname="submenu.navitem.linktitle">
+            <trans-unit id="skipnavlink">
+                <source>Skip to main content</source>
+                <target>Passer au contenu principal</target>
+            </trans-unit>
+            <trans-unit id="submenu.navitem.linktitle">
                 <source>Link to page</source>
                 <target>Lien à la page</target>
             </trans-unit>
